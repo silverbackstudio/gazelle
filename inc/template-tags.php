@@ -121,22 +121,29 @@ if ( ! function_exists( 'twentysixteen_post_thumbnail' ) ) :
  *
  * @since Twenty Sixteen 1.0
  */
-function twentysixteen_post_thumbnail() {
+function twentysixteen_post_thumbnail($size=null) {
+	
+	global $_wp_additional_image_sizes;
+	
 	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 		return;
 	}
+	
+	if(empty($size)){
+		$size = (isset($_wp_additional_image_sizes['page-thumbnail']) && is_page()) ? 'page-thumbnail' : 'post-thumbnail';
+	}	
 
 	if ( is_singular() ) :
 	?>
 
 	<div class="post-thumbnail">
-		<?php the_post_thumbnail(); ?>
+		<?php the_post_thumbnail($size); ?>
 	</div><!-- .post-thumbnail -->
 
 	<?php else : ?>
 
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-		<?php the_post_thumbnail( 'post-thumbnail', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
+		<?php the_post_thumbnail( $size, array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
 	</a>
 
 	<?php endif; // End is_singular()
@@ -252,3 +259,4 @@ function twentysixteen_the_custom_logo() {
 	}
 }
 endif;
+
