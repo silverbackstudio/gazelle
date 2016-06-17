@@ -28,7 +28,7 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<div class="filter-container">
-				<span class="list-label"><?php _e('Categories', 'twentysixteen'); ?></span>
+				<span class="list-label"><?php _e('Categories','gazelle'); ?></span>
 				<ul id="category-filter" class="filter-list" data-filter="ajax" data-filter-target=".post-list">
 					<?php wp_list_categories(array('title_li'=>'', 'show_option_all'=>__('All', 'gazelle') )); ?>
 				</ul>

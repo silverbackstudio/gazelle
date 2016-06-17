@@ -20,7 +20,7 @@
 			
 			<div class="site-info content-wrapper">
 				<p><?php bloginfo('contact_address'); ?> <?php bloginfo('contact_address2'); ?><br /><a href="tel:<?php bloginfo('contact_phone'); ?>"><?php bloginfo('contact_phone'); ?></a><br/><?php echo hide_email(get_bloginfo('contact_email','display')); ?></a></p>
-				<p><?php bloginfo('contact_company_name'); ?><br /><?php _e('P.IVA','gazelle'); ?>&nbsp;<?php bloginfo('contact_vat'); ?></p>
+				<p><?php bloginfo('contact_company_name'); ?><br /><?php _e('VAT ID','gazelle'); ?>&nbsp;<?php bloginfo('contact_vat'); ?></p>
 			</div><!-- .site-info -->
 			
 			<?php if ( has_nav_menu( 'social' ) ) : ?>

@@ -1163,12 +1163,12 @@ button,
 
 li.facebook a:after {
     content: "\e901";    
-    font-family: 'icomoon';
+    font-family: 'gazelle-icons';
 }
 
 li.instagram a:after {
-    content: "\e91e";
-    font-family: 'icomoon';
+    content: "\e900";
+    font-family: 'gazelle-icons';
     font-size: 34px;
 }
 
@@ -1206,7 +1206,7 @@ li.instagram a:after {
 
 .search-form-container .search-toggle:before {
     content: "\e90b";
-    font-family: "icomoon";
+    font-family: "gazelle-icons";
     color: #666;
 }
 
@@ -1215,7 +1215,7 @@ li.instagram a:after {
 }
 
 .search-toggle:before {
-    font-family: icomoon;
+    font-family: gazelle-icons;
     content: "\e90a";
     color: #999;
     font-size: 14px;
@@ -1248,7 +1248,7 @@ body.search-toggled-on #masthead .search-form-container {
 }
 
 .search-submit:before {
-    font-family: icomoon;
+    font-family: gazelle-icons;
     content: "\e90a";
     font-size: 0.8em;
 }
@@ -1295,7 +1295,7 @@ body.search-toggled-on #masthead .search-form-container {
 
 .more-link:after {
     content: "\e90d";
-    font-family: "icomoon";
+    font-family: "gazelle-icons";
     position: relative;
     top: 0.2em;
 }
@@ -1423,54 +1423,6 @@ body.search-toggled-on #masthead .search-form-container {
 #masthead .header-image img {
     height: 100%;
     width: 100%;
-    margin-top: 3em;
-}
-
-#header-ribbon {
-    background: #0b233f;
-    text-align: center;
-    padding: 1em;
-    line-height: 1.7em;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    z-index: 999;
-    box-shadow: 0px -1px 4px rgba(0,0,0,0.3);
-}
-
-#header-ribbon, #header-ribbon a {
-    color: #fff;
-}
-
-#header-ribbon a:hover {
-    color: #cccccc;
-}
-
-#header-ribbon .phone:before {
-    font-family: "icomoon";
-    content:"\e904";
-    margin-right: 10px;
-    color: #8790a1;
-    position: relative;
-    top: 2px;
-}
-
-#header-ribbon .email a:before {
-    font-family: "icomoon";
-    content:"\e90c";
-    margin-right: 10px;
-    color: #8790a1;
-    position: relative;
-    top: 5px;
-    font-size: 1.3em;
-}
-
-#header-ribbon span {
-    display: block;
-}
-
-#header-ribbon .call-to-action, #header-ribbon .email {
-    display: none;
 }
 
 /**
@@ -1540,58 +1492,6 @@ body.page #main > article.has-post-thumbnail {
     transform: rotate(90deg);  
 }
 
-.collapsible a {
-    position: relative;
-    height: 6em;
-}
-
-.collapsible a:before, .collapsible p {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.collapsible a:before {
-    content: " ";
-    width: 4em;
-    height: 4em;
-    background: #0b233f;
-    transform: rotate(45deg);
-    margin-right: 3em;
-}
-
-.collapsible a:after {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    color: #fff;
-    font-family: "icomoon";
-    line-height: 2.5em;
-    width: 2em;
-    text-align: center;
-    font-weight: 200;
-    font-size: 2em;
-}
-
-.diritto-civile a:after {
-    content: "\e903";
-}
-
-.diritto-societario a:after {
-    content: "\e905";
-}
-
-.diritto-famiglia a:after {
-    content: "\e900";
-}
-
-.procedure-concorsuali a:after {
-    content: "\e901";
-}
-
-.diritto-assicurazioni a:after {
-    content: "\e908";
-}
-
 #contact-us {
     font-family: "DIN Next W01";
     color: rgb(153, 153, 153);
@@ -1637,7 +1537,7 @@ body.page #main > article.has-post-thumbnail {
     color: #495970;
     text-align: center;
     content: "\e902";
-    font-family: "icomoon";
+    font-family: "gazelle-icons";
     font-size: 1.5em;
 }
 
@@ -1850,7 +1750,7 @@ body.page #main > article.has-post-thumbnail {
 
 .nav-next .meta-nav:after, .nav-previous .meta-nav:before {
     content: "\e90d";
-    font-family: "icomoon";
+    font-family: "gazelle-icons";
     display: inline-block;
     position: relative;
     top: 0.1em;
@@ -1973,7 +1873,7 @@ body.page #main > article.has-post-thumbnail {
 
 .map-locker .map-lock:after {
     content: '\e90e';
-    font-family: 'icomoon';
+    font-family: 'gazelle-icons';
     font-size: 2em;
 }
 
@@ -2035,7 +1935,7 @@ img.adp-marker {
 
 #instagram .section-title:after {
     content: "\e91d";
-    font-family: "icomoon";
+    font-family: "gazelle-icons";
     padding-left: 10px;
     font-size: 16px;
 }
@@ -2069,7 +1969,6 @@ img.adp-marker {
     text-align: center;
     padding: 1em 0 0 0;
     margin-top: 1em;
-    margin-bottom: 3.8em;
 }
 
 #colophon .site-title {
@@ -2155,7 +2054,7 @@ iframe {
 
 #contacts li:before {
     margin-right: 0.5em;
-    font-family: "icomoon";
+    font-family: "gazelle-icons";
     font-size: 1.1em;
 }
 

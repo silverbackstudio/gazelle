@@ -1,0 +1,392 @@
+# Loco Gettext template
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SilverbackStudio Gazelle\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Fri Jun 17 2016 16:20:28 GMT+0200 (ora legale Europa "
+"occidentale)\n"
+"POT-Revision-Date: Fri Jun 17 2016 16:37:54 GMT+0200 (ora legale Europa "
+"occidentale)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: ../footer.php:23
+msgid "VAT ID"
+msgstr ""
+
+#: ../footer.php:27
+msgid "Footer Social Links Menu"
+msgstr ""
+
+#: ../footer.php:41
+msgid "Footer Legal Menu"
+msgstr ""
+
+#: ../comments.php:31
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr ""
+
+#. translators: 1: number of comments, 2: post title
+#: ../comments.php:35
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../comments.php:69
+msgid "Comments are closed."
+msgstr ""
+
+#: ../index.php:46 ../archive.php:49 ../home.php:55 ../search.php:37
+msgid "Previous page"
+msgstr ""
+
+#: ../index.php:47 ../archive.php:50 ../home.php:56 ../search.php:38
+msgid "Next page"
+msgstr ""
+
+#: ../index.php:48 ../archive.php:51 ../home.php:57 ../image.php:60 ../search.php:
+#: 39 ../template-parts/content.php:37 ../template-parts/content-page.php:31 ..
+#: /template-parts/content-single.php:29
+msgid "Page"
+msgstr ""
+
+#: ../404.php:17
+msgid "Sorry! That page can&rsquo;t be found."
+msgstr ""
+
+#: ../404.php:21
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: ../front-page.php:54
+msgid "Check out our Instagram Gallery"
+msgstr ""
+
+#: ../single.php:29 ../image.php:102
+msgctxt "Parent post link"
+msgid ""
+"<span class=\"meta-nav\">Published in</span><span class=\"post-"
+"title\">%title</span>"
+msgstr ""
+
+#: ../single.php:34
+msgid "Next"
+msgstr ""
+
+#: ../single.php:35
+msgid "Next post:"
+msgstr ""
+
+#: ../single.php:37
+msgid "Previous"
+msgstr ""
+
+#: ../single.php:38
+msgid "Previous post:"
+msgstr ""
+
+#: ../home.php:31
+msgid "Categories"
+msgstr ""
+
+#: ../home.php:33
+msgid "All"
+msgstr ""
+
+#: ../image.php:24
+msgid "Previous Image"
+msgstr ""
+
+#: ../image.php:25
+msgid "Next Image"
+msgstr ""
+
+#: ../image.php:56 ../template-parts/content.php:33 ../template-parts/content-
+#: page.php:27 ../template-parts/content-single.php:25
+msgid "Pages:"
+msgstr ""
+
+#: ../image.php:73
+msgctxt "Used before full size attachment link."
+msgid "Full size"
+msgstr ""
+
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#: ../image.php:84 ../template-parts/content.php:49 ../template-parts/content-
+#: page.php:41 ../template-parts/content-search.php:28 ../template-parts/content-
+#: search.php:43 ../template-parts/content-single.php:46
+#, php-format
+msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: ../functions.php:134 ../header.php:58
+msgid "Primary Menu"
+msgstr ""
+
+#: ../functions.php:135 ../header.php:69
+msgid "Social Links Menu"
+msgstr ""
+
+#: ../functions.php:136
+msgid "Footer Menu"
+msgstr ""
+
+#: ../functions.php:185
+msgid "Tiled Gallery"
+msgstr ""
+
+#: ../functions.php:215
+msgid "Sidebar"
+msgstr ""
+
+#: ../functions.php:217
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: ../functions.php:355
+msgid "expand child menu"
+msgstr ""
+
+#: ../functions.php:356
+msgid "collapse child menu"
+msgstr ""
+
+#: ../header.php:27
+msgid "Skip to content"
+msgstr ""
+
+#: ../header.php:48 ../header.php:51
+msgid "Search"
+msgstr ""
+
+#: ../header.php:54
+msgid "Menu"
+msgstr ""
+
+#: ../searchform.php:13
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: ../searchform.php:14
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: ../searchform.php:16
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: ../search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../inc/template-tags.php:25
+msgctxt "Used before post author name."
+msgid "Author"
+msgstr ""
+
+#: ../inc/template-tags.php:38
+msgctxt "Used before post format."
+msgid "Format"
+msgstr ""
+
+#: ../inc/template-tags.php:50
+#, php-format
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: ../inc/template-tags.php:79
+msgctxt "Used before publish date."
+msgid "Posted on"
+msgstr ""
+
+#: ../inc/template-tags.php:95 ../inc/template-tags.php:103
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ""
+
+#: ../inc/template-tags.php:98
+msgctxt "Used before category names."
+msgid "Categories"
+msgstr ""
+
+#: ../inc/template-tags.php:106
+msgctxt "Used before tag names."
+msgid "Tags"
+msgstr ""
+
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#: ../inc/template-tags.php:191 ../template-parts/content.php:28
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: ../inc/template-tags.php:340
+msgid "Directions"
+msgstr ""
+
+#: ../inc/template-tags.php:342
+msgid "Get route"
+msgstr ""
+
+#: ../inc/template-tags.php:346
+msgid "Walking"
+msgstr ""
+
+#: ../inc/template-tags.php:348
+msgid "Driving"
+msgstr ""
+
+#: ../inc/template-tags.php:350
+msgid "Transit"
+msgstr ""
+
+#: ../inc/template-tags.php:354
+msgid "Station"
+msgstr ""
+
+#: ../inc/template-tags.php:355
+msgid "Duomo"
+msgstr ""
+
+#: ../inc/template-tags.php:362 ../template-parts/content-bands.php:45
+msgid "Unlock map"
+msgstr ""
+
+#: ../inc/template-tags.php:363 ../template-parts/content-bands.php:46
+msgid "Lock map"
+msgstr ""
+
+#: ../inc/template-tags.php:367
+msgid "Show Route"
+msgstr ""
+
+#: ../inc/back-compat.php:41 ../inc/back-compat.php:53 ../inc/back-compat.php:68
+#, php-format
+msgid ""
+"Twenty Sixteen requires at least WordPress version 4.4. You are running "
+"version %s. Please upgrade and try again."
+msgstr ""
+
+#: ../inc/customizer.php:130
+msgid "Base Color Scheme"
+msgstr ""
+
+#: ../inc/customizer.php:145
+msgid "Page Background Color"
+msgstr ""
+
+#: ../inc/customizer.php:160
+msgid "Link Color"
+msgstr ""
+
+#: ../inc/customizer.php:172
+msgid "Main Text Color"
+msgstr ""
+
+#: ../inc/customizer.php:184
+msgid "Secondary Text Color"
+msgstr ""
+
+#: ../inc/customizer.php:253
+msgid "Default"
+msgstr ""
+
+#: ../inc/customizer.php:263
+msgid "Dark"
+msgstr ""
+
+#: ../inc/customizer.php:273
+msgid "Gray"
+msgstr ""
+
+#: ../inc/customizer.php:283
+msgid "Red"
+msgstr ""
+
+#: ../inc/customizer.php:293
+msgid "Yellow"
+msgstr ""
+
+#. Name of the template
+msgid "No Columns"
+msgstr ""
+
+#: ../template-parts/content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: ../template-parts/content-none.php:19
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../template-parts/content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../template-parts/content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../template-parts/content.php:14
+msgid "Featured"
+msgstr ""
+
+#: ../template-parts/biography.php:28
+msgid "Author:"
+msgstr ""
+
+#: ../template-parts/biography.php:33
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#. Name of the theme
+msgid "SilverbackStudio Gazelle"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://www.silverbackstudio.it"
+msgstr ""
+
+#. Description of the theme
+msgid "SilverbackStudio smart theme based on TwentySixteen HTML Structure"
+msgstr ""
+
+#. Author of the theme
+msgid "SilverbackStudio"
+msgstr ""

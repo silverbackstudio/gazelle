@@ -88,6 +88,7 @@ function setup() {
 	 * If you're building a theme based on Twenty Sixteen, use a find and replace
 	 * to change 'twentysixteen' to the name of your theme in all the template files
 	 */
+	load_theme_textdomain( 'twentysixteen', get_template_directory() . '/languages' );
 	load_theme_textdomain( 'gazelle', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
@@ -170,7 +171,7 @@ function setup() {
 	 * This theme styles the visual editor to resemble the theme style,
 	 * specifically font, colors, icons, and column width.
 	 */
-	add_editor_style( array( 'css/editor-style.css', fonts_url() ) );
+	add_editor_style( array( 'css/editor-style.css') );
 
 	// Indicate widget sidebars can use selective refresh in the Customizer.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -219,7 +220,7 @@ function widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-
+	/*
 	register_sidebar( array(
 		'name'          => __( 'Content Bottom 1', 'twentysixteen' ),
 		'id'            => 'sidebar-2',
@@ -239,49 +240,9 @@ function widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	*/
 }
 add_action( 'widgets_init', 'widgets_init' );
-
-if ( ! function_exists( 'fonts_url' ) ) :
-/**
- * Register Google fonts for Twenty Sixteen.
- *
- * Create your own twentysixteen_fonts_url() function to override in a child theme.
- *
- * @since Twenty Sixteen 1.0
- *
- * @return string Google fonts URL for the theme.
- */
-function fonts_url() {
-	$fonts_url = '';
-	$fonts     = array();
-	$subsets   = 'latin,latin-ext';
-
-	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'twentysixteen' ) ) {
-		$fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
-	}
-
-	/* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'twentysixteen' ) ) {
-		$fonts[] = 'Montserrat:400,700';
-	}
-
-	/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'twentysixteen' ) ) {
-		$fonts[] = 'Inconsolata:400';
-	}
-
-	if ( $fonts ) {
-		$fonts_url = add_query_arg( array(
-			'family' => urlencode( implode( '|', $fonts ) ),
-			'subset' => urlencode( $subsets ),
-		), 'https://fonts.googleapis.com/css' );
-	}
-
-	return $fonts_url;
-}
-endif;
 
 /**
  * Handles JavaScript detection.
@@ -337,7 +298,7 @@ function scripts() {
 	$loaded_deps = array();
 	
     wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Lato:400,300,700,400italic');
-    //wp_enqueue_style('icons-pack',  get_template_directory_uri().'/icons/icomoon/style.css');
+    wp_enqueue_style('icons-pack',  get_template_directory_uri().'/icons/style.css');
     wp_enqueue_style('flickity', '//cdn.jsdelivr.net/flickity/1.2/flickity.min.css');
 
     if(isset($config['fonts_com'])){

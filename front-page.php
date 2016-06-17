@@ -51,7 +51,7 @@ get_header(); ?>
 
 	<section id="instagram">
 		<header class="section-header">
-			<h3 class="section-title"><?php _e('Checkout our Instagram Gallery', 'gazelle'); ?></h3>
+			<h3 class="section-title"><?php _e('Check out our Instagram Gallery', 'gazelle'); ?></h3>
 		</header>
 		<div id="instafeed" class="section-content"></div>
 	</section>
