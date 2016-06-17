@@ -260,19 +260,6 @@ function twentysixteen_the_custom_logo() {
 }
 endif;
 
-//Fallback ACF
-if(!function_exists('the_field')){
-	
-	function get_field($field_name, $post_id=null){
-		return get_post_meta($field_name, $post_id?:get_the_ID(), true);
-	}
-	
-	function the_field($field_name, $post_id=null){
-		echo get_field($field_name, $post_id);
-	}
-	
-}
-
 function hide_email($email)
 { 
 	$character_set = '+-.0123456789@ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz';
