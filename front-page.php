@@ -48,13 +48,6 @@ get_header(); ?>
 
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
-
-	<section id="instagram">
-		<header class="section-header">
-			<h3 class="section-title"><?php _e('Check out our Instagram Gallery', 'gazelle'); ?></h3>
-		</header>
-		<div id="instafeed" class="section-content"></div>
-	</section>
 	
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

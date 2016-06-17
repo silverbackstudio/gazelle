@@ -393,3 +393,10 @@ function css_crossfade($selector, $count, $showtime=4, $transition=2 ){
 	</style>	
 	<?php
 }
+
+function has_instagram(){
+	
+	$config = \Silverback\WP\Themes\Gazelle\get_config();
+	
+	return isset($config['instagram']);
+}
