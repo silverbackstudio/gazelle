@@ -59,7 +59,7 @@ function &get_config(){
     
     static $config = null;
     
-    $file = get_stylesheet_directory().'/config.ini';
+    $file = locate_template('config.ini', false);
     
     if(empty($config) && file_exists($file)){
         $config = parse_ini_file($file, true);
