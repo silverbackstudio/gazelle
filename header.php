@@ -28,7 +28,7 @@
 
 		<header id="masthead" class="site-header" role="banner">
 			<div class="site-header-main">
-				<div class="site-branding">
+				<div class="site-branding  <?php echo !is_front_page()?'stuck':''; ?>">
 					<?php twentysixteen_the_custom_logo(); ?>
 
 					<?php if ( is_front_page() && is_home() ) : ?>
@@ -43,6 +43,13 @@
 					<?php endif; ?>
 				</div><!-- .site-branding -->
 
+				<div id="main-header-panel" class="<?php echo is_front_page()?'waypoints-sticky':'stuck'; ?>">
+
+					<button class="search-toggle"><span class="screen-reader-text"><?php _e('Search', 'gazelle') ?></span></button>	
+					<div class="search-form-container">
+						<?php echo get_search_form(); ?>
+						<button class="search-toggle"><span class="screen-reader-text"><?php _e('Search', 'gazelle') ?></span></button>
+					</div>
 				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
 					<button id="menu-toggle" class="menu-toggle"><?php _e( 'Menu', 'twentysixteen' ); ?></button>
 
@@ -58,7 +65,7 @@
 							</nav><!-- .main-navigation -->
 						<?php endif; ?>
 
-						<?php if ( has_nav_menu( 'social' ) ) : ?>
+						<?php if ( has_nav_menu( 'social' ) && apply_filters('show_social_in_header', false)) : ?>
 							<nav id="social-navigation" class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'twentysixteen' ); ?>">
 								<?php
 									wp_nav_menu( array(
@@ -73,9 +80,9 @@
 						<?php endif; ?>
 					</div><!-- .site-header-menu -->
 				<?php endif; ?>
-			</div><!-- .site-header-main -->
+				</div><!-- .main-header-panel -->
 
-			<?php if ( get_header_image() ) : ?>
+			<?php if ( is_front_page() && get_header_image() ) : ?>
 				<?php
 					/**
 					 * Filter the default twentysixteen custom header sizes attribute.
@@ -88,12 +95,12 @@
 					 */
 					$custom_header_sizes = apply_filters( 'twentysixteen_custom_header_sizes', '(max-width: 709px) 85vw, (max-width: 909px) 81vw, (max-width: 1362px) 88vw, 1200px' );
 				?>
-				<div class="header-image">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<div class="header-image image-fit-cover">
 						<img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id ) ); ?>" sizes="<?php echo esc_attr( $custom_header_sizes ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-					</a>
 				</div><!-- .header-image -->
 			<?php endif; // End header image check. ?>
+			</div><!-- .site-header-main -->
+
 		</header><!-- .site-header -->
 
 		<div id="content" class="site-content">

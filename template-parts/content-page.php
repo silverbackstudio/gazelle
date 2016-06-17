@@ -9,15 +9,19 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
 
 	<?php twentysixteen_post_thumbnail(); ?>
+	
+	<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<p class="entry-subtitle subtitle"><?php echo get_field('subtitle'); ?></p>
+	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php
+		add_filter('the_content', 'strip_first_gallery');
 		the_content();
+		remove_filter('the_content', 'strip_first_gallery');
 
 		wp_link_pages( array(
 			'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',

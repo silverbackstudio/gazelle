@@ -130,7 +130,7 @@ function twentysixteen_post_thumbnail($size=null) {
 	}
 	
 	if(empty($size)){
-		$size = (isset($_wp_additional_image_sizes['page-thumbnail']) && is_page()) ? 'page-thumbnail' : 'post-thumbnail';
+		$size = (isset($_wp_additional_image_sizes['page-cover']) && is_page()) ? 'page-cover' : 'post-thumbnail';
 	}	
 
 	if ( is_singular() ) :
@@ -260,3 +260,149 @@ function twentysixteen_the_custom_logo() {
 }
 endif;
 
+//Fallback ACF
+if(!function_exists('the_field')){
+	
+	function get_field($field_name, $post_id=null){
+		return get_post_meta($field_name, $post_id?:get_the_ID(), true);
+	}
+	
+	function the_field($field_name, $post_id=null){
+		echo get_field($field_name, $post_id);
+	}
+	
+}
+
+function hide_email($email)
+{ 
+	$character_set = '+-.0123456789@ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz';
+	
+  $key = str_shuffle($character_set); $cipher_text = ''; $id = 'e'.rand(1,999999999);
+  
+  for ($i=0;$i<strlen($email);$i+=1) $cipher_text .= $key[strpos($character_set,$email[$i])];
+  
+  $script = 'var a="'.$key.'";var b=a.split("").sort().join("");var c="'.$cipher_text.'";var d="";';
+  $script.= 'for(var e=0;e<c.length;e++)d+=b.charAt(a.indexOf(c.charAt(e)));';
+  $script.= 'document.getElementById("'.$id.'").innerHTML="<a href=\\"mailto:"+d+"\\">"+d+"</a>"';
+  $script = "eval(\"".str_replace(array("\\",'"'),array("\\\\",'\"'), $script)."\")"; 
+  $script = '<script type="text/javascript">/*<![CDATA[*/'.$script.'/*]]>*/</script>';
+  
+  return '<span id="'.$id.'">[javascript protected email address]</span>'.$script;
+}
+
+add_shortcode('hide_email', function($atts, $content){
+	return hide_email($content);
+});
+
+if (!function_exists('strip_first_gallery')){
+	// toglie la prima galleria nel contenuto (da utilizzare con un filtro)
+	function strip_first_gallery( $content ) {
+	    $matches = array();
+	    
+	    if ( preg_match( '/' . get_shortcode_regex(array('gallery')) . '/s', $content, $matches ) ) {
+	        $pos = strpos( $content, $matches[0] );
+	        
+	        if(false !== $pos) {
+	            return substr_replace( $content, '', $pos, strlen( $matches[0] ) );
+	        }
+	    }
+	
+	    return $content;
+	}
+}
+
+if (!function_exists('post_begins_with_gallery')){
+	function post_begins_with_gallery($content=null){
+		if(is_null($content)){
+			$content = get_the_content();
+		}
+		
+	    return preg_match('/^(' . get_shortcode_regex(array('gallery')) . ')/s',  trim(strip_tags($content)) );
+	}
+}
+
+
+function get_post_type_description($post_type=null) {
+	
+	if(empty($post_type)){
+    	$post_type = get_query_var( 'post_type' );
+	}
+	
+    if ( is_array( $post_type ) )
+        $post_type = reset( $post_type );
+ 
+    $post_type_obj = get_post_type_object( $post_type );	
+	
+	return $post_type_obj?$post_type_obj->description:'';
+}
+
+function the_language_switcher() {
+	if (function_exists('mlp_show_linked_elements')) {
+		mlp_show_linked_elements(array( 'link_text'=> 'language_short', 'display_flag'=> FALSE, 'show_current_blog' => true ));
+	}
+}
+
+function directions_map_shortcode($atts, $content){ 
+		$atts = shortcode_atts( array( 'lat' => '43.7773577', 'lng' => '11.252326900000071', 'zoom'=>'14' ), $atts, 'directions_map' ); 
+		
+		ob_start();
+		?>
+	<div id="directions">
+		<form id="ask-directions" class="gmap-directions-form" data-target-map="#reach-us .google-map">
+			
+			<label for="directionsOrigin"><?php _e('Directions','gazelle'); ?></label>
+			<input type="text" id="directionsOrigin" class="gmaps-directions-origin gmaps-autocomplete"  name="origin"/>
+			<button type="submit" class="submit"><span class="screen-reader-text"><?php _e('Get route','gazelle'); ?></span></button>
+			
+			<div class="travel-modes gmaps-travel-modes">
+				<input type="radio" id="travelModeWalking" name="travelMode" value="WALKING" checked="checked"  />
+				<label for="travelModeWalking" class="icon-directions_walk"><span  class="screen-reader-text" ><?php _e('Walking','gazelle'); ?></span></label>
+				<input type="radio" id="travelModeDriving" name="travelMode" value="DRIVING" />
+				<label for="travelModeDriving" class="icon-directions_car"><span  class="screen-reader-text" ><?php _e('Driving','gazelle'); ?></span></label>				
+				<input type="radio" id="travelModeTransit" name="travelMode" value="TRANSIT" />
+				<label for="travelModeTransit" class="icon-directions_transit"><span  class="screen-reader-text" ><?php _e('Transit','gazelle'); ?></span></label>					
+			</div>
+		</form>
+		<div class="quick-directions">
+			<button id="centralstation" data-target-form="#ask-directions" class="preload-directions" value="Santa Maria Novella, Firenze"><?php _e('Station','gazelle'); ?></button
+			><button id="citycenter" data-target-form="#ask-directions" class="preload-directions" value="Duomo, Firenze"><?php _e('Duomo','gazelle'); ?></button>
+		</div>
+	</div>
+	<div class="map-container" id="reach-us" data-map-lng="<?php echo esc_attr($atts['lng']); ?>" data-map-lat="<?php echo esc_attr($atts['lat']); ?>">
+		<div class="map-locker locked">
+			<div class="google-map"></div>
+			<div class="map-lock">
+				<span class="unlock-label"><?php _e('Unlock map','gazelle'); ?></span>
+				<span class="lock-label"><?php _e('Lock map','gazelle'); ?></span>
+			</div>
+		</div>
+		<div class="map-directions">
+			<h4 class="action-button"><?php _e('Show Route','gazelle'); ?></h4>
+		</div>
+	</div>	
+<?php return ob_get_clean();
+}
+
+add_shortcode('directions_map', 'directions_map_shortcode');
+
+function css_crossfade($selector, $count, $showtime=4, $transition=2 ){
+	
+	static $instance = 0; $instance++;
+	
+	$duration = ($showtime+$transition)*$count; ?>
+	<style type="text/css">
+		@keyframes crossfade<?php echo $instance ?> {
+			0%, <?php echo ceil($showtime/$duration*100); ?>%, 100%  { opacity:1; }
+			<?php echo ceil(1/$count*100); ?>%, <?php echo 100-ceil(($transition/$duration)*100); ?>% { opacity:0; }
+		}
+		
+		<?php echo $selector; ?> {
+			animation: crossfade<?php echo $instance ?> <?php echo ($showtime*$count); ?>s ease-in-out infinite;
+		}
+		
+		<?php for($i=1; $i<=$count; $i++): ?>
+		<?php echo $selector; ?>:nth-of-type(<?php echo $i ?>) { animation-delay: <?php echo $showtime*($count-$i) ?>s; }
+		<?php endfor; ?>
+	</style>	
+	<?php
+}
