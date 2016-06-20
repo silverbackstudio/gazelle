@@ -294,7 +294,7 @@ input,
 select,
 textarea {
 	color: #1a1a1a;
-	font-family: Merriweather, Georgia, serif;
+	font-family: Georgia, serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.75;
@@ -547,24 +547,24 @@ td {
 /* Placeholder text color -- selectors need to be separate to work. */
 ::-webkit-input-placeholder {
 	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: "Helvetica Neue", sans-serif;
 }
 
 :-moz-placeholder {
 	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: "Helvetica Neue", sans-serif;
 }
 
 ::-moz-placeholder {
 	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: "Helvetica Neue", sans-serif;
 	opacity: 1;
 	/* Since FF19 lowers the opacity of the placeholder by default */
 }
 
 :-ms-input-placeholder {
 	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: "Helvetica Neue", sans-serif;
 }
 
 /**
@@ -783,7 +783,7 @@ a:active {
 	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
 	color: #21759b;
 	display: block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: "Helvetica Neue", sans-serif;
 	font-size: 14px;
 	font-weight: 700;
 	left: -9999em;
@@ -877,20 +877,17 @@ blockquote.aligncenter {
  */
 
 body {
-    font-family: 'Lato', sans-serif;
     color: #444;
     background: #FFF;
     font-weight: 200;
 }
 
 #site-navigation {
-    font-family:'Arno W01';
     min-width: 200px;
     padding-top: 5em;
 }
 
 blockquote {
-    font-family:'Arno W01';
     font-size: 1.3em;
     font-style: italic;
     padding-left: 1em;
@@ -927,7 +924,6 @@ input[type="button"], input[type="reset"], input[type="submit"] {
 }
 
 h1, h2 {
-    font-family:'Arno W01';
     color: #0b233f;
     font-size: 2em;
 }
@@ -1284,7 +1280,6 @@ body.search-toggled-on #masthead .search-form-container {
 .more-link {
     text-decoration: none;
     display: inherit;
-    font-family:'Arno W01';
     font-size: 1.1em;
     color: #0b233f;
     padding-left: 0.5em;
@@ -1493,7 +1488,6 @@ body.page #main > article.has-post-thumbnail {
 }
 
 #contact-us {
-    font-family: "DIN Next W01";
     color: rgb(153, 153, 153);
     text-align: center;
     margin-top: 3em;
@@ -1985,7 +1979,6 @@ img.adp-marker {
 
 #colophon .legal-info, #colophon .service-navigation {
     font-size: 0.8em;
-    font-family: sans-serif;
     font-weight: 200;
 }
 
