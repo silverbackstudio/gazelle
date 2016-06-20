@@ -1,6 +1,6 @@
 /*
 Theme Name: SilverbackStudio Gazelle
-Theme URI: https://www.silverbackstudio.it
+Theme URI: https://gitlab.com/silverbackstudio/gazelle
 Author: SilverbackStudio
 Author URI: https://www.silverbackstudio.it
 Description: SilverbackStudio smart theme based on TwentySixteen HTML Structure
@@ -924,7 +924,6 @@ input[type="button"], input[type="reset"], input[type="submit"] {
 }
 
 h1, h2 {
-    color: #0b233f;
     font-size: 2em;
 }
 
@@ -1928,7 +1927,7 @@ img.adp-marker {
 }
 
 #instagram .section-title:after {
-    content: "\e91d";
+    content: "\e900";
     font-family: "gazelle-icons";
     padding-left: 10px;
     font-size: 16px;
@@ -1968,8 +1967,6 @@ img.adp-marker {
 #colophon .site-title {
     display: block;
     height: 70px;
-    background: url(media/logo.png) center center no-repeat;
-    background-size: contain;
     margin: 0 auto;
 }
 
