@@ -32,9 +32,9 @@
 					<?php twentysixteen_the_custom_logo(); ?>
 
 					<?php if ( is_front_page() && is_home() ) : ?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span><?php bloginfo( 'name' ); ?></span></a></h1>
 					<?php else : ?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span><?php bloginfo( 'name' ); ?></span></a></p>
 					<?php endif;
 
 					$description = get_bloginfo( 'description', 'display' );
@@ -51,7 +51,7 @@
 						<button class="search-toggle"><span class="screen-reader-text"><?php _e('Search', 'gazelle') ?></span></button>
 					</div>
 				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
-					<button id="menu-toggle" class="menu-toggle"><?php _e( 'Menu', 'twentysixteen' ); ?></button>
+					<button id="menu-toggle" class="menu-toggle mobile-toggle"><div id="menu-icon"></div><span class="screen-reader-text"><?php _e( 'Menu', 'twentysixteen' ); ?></span></button>
 
 					<div id="site-header-menu" class="site-header-menu">
 						<?php if ( has_nav_menu( 'primary' ) ) : ?>
@@ -64,6 +64,9 @@
 								?>
 							</nav><!-- .main-navigation -->
 						<?php endif; ?>
+
+	                    <button class="search-toggle"><span class="screen-reader-text"><?php _e('Search', 'studiopanebarco') ?></span></button> 
+	                    <?php the_language_switcher(); ?>
 
 						<?php if ( has_nav_menu( 'social' ) && apply_filters('show_social_in_header', false)) : ?>
 							<nav id="social-navigation" class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'twentysixteen' ); ?>">

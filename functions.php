@@ -68,8 +68,19 @@ function &get_config(){
     return $config;
 }
 
+function add_options(){
+	
+	$config = &get_config();
+	
+	if(isset($config['sendgrid'])) {
+		foreach($config['sendgrid'] as $name=>$value){
+		    add_option('sendgrid_'.$name, $value);
+		}
+	}
+}
 
-if ( ! function_exists( 'setup' ) ) :
+add_action("after_switch_theme", 'add_options');
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -176,7 +187,7 @@ function setup() {
 	// Indicate widget sidebars can use selective refresh in the Customizer.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
-endif; // twentysixteen_setup
+
 add_action( 'after_setup_theme', 'setup' );
 
 

@@ -9,10 +9,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-	<?php twentysixteen_post_thumbnail(); ?>
 	
-	<header class="entry-header">
+	<?php twentysixteen_post_thumbnail(); ?>	
+	
+	<header class="entry-header">q
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<p class="entry-subtitle subtitle"><?php echo get_field('subtitle'); ?></p>
 	</header><!-- .entry-header -->
@@ -34,16 +34,12 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<?php
-		edit_post_link(
-			sprintf(
-				/* translators: %s: Name of current post */
-				__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
-				get_the_title()
-			),
-			'<footer class="entry-footer"><span class="edit-link">',
-			'</span></footer><!-- .entry-footer -->'
-		);
-	?>
+	<?php if(get_post_gallery()): ?>
+		<?php echo get_post_gallery(); ?>
+	<?php endif; ?>	
+		
+	<div class="content-bands">
+		<?php get_template_part( 'template-parts/content', 'bands' ); ?>
+	</div>	
 
 </article><!-- #post-## -->
