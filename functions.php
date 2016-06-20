@@ -329,9 +329,21 @@ function scripts() {
 
     if(isset($config['iubenda'])) {
 	    wp_enqueue_script('iubenda', '//cdn.iubenda.com/iubenda.js', null, null, true);
-	    wp_enqueue_script('iubenda-cookie', '//cdn.iubenda.com/cookie_solution/safemode/iubenda_cs.js');    	
-	    wp_localize_script( 'iubenda-cookie', '_iub', array());
-	    wp_localize_script( 'iubenda-cookie', 'nullVar; _iub.csConfiguration', array_merge( $config['iubenda'], array( 'lang'=> "it" ) )); //BM little hack in the name to overcome the JS var [varname] template :D
+	    wp_enqueue_script('iubenda-cookie', '//cdn.iubenda.com/cookie_solution/safemode/iubenda_cs.js'); 
+	    
+		wp_add_inline_script('iubenda-cookie', 
+			"var _iub = _iub || [];
+			_iub.csConfiguration = {
+			  siteId: '".$config['iubenda']['siteId']."',
+			  cookiePolicyId: '".$config['iubenda']['cookiePolicyId']."',
+			  lang: '".substr(get_bloginfo('language'),0,2)."',
+			  callback: {
+			    onConsentGiven: function(){
+			      dataLayer.push({'event': 'iubenda_consent_given'});
+			    }
+			  }
+			};"
+		);	    
     }
     
     
