@@ -12,7 +12,7 @@
 	
 	<?php twentysixteen_post_thumbnail(); ?>	
 	
-	<header class="entry-header">q
+	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<p class="entry-subtitle subtitle"><?php echo get_field('subtitle'); ?></p>
 	</header><!-- .entry-header -->
