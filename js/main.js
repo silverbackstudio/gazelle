@@ -25,20 +25,17 @@ global Waypoints
     }
 
     
-    $( '#menu-toggle' ).on('click', function(){
+    $( '#menu-toggle' ).on('click.gazelle', function(){
       $('body').toggleClass('menu-toggled-on');
     });
     
-    $('.search-toggle').click(function(){
+    $('.search-toggle').on('click.gazelle',function(){
       $('body').toggleClass('search-toggled-on');
     });
     
     $('.waypoints-sticky').each(function(){
-      new Waypoint.Sticky({
-        element: this,
-        handler: function(direction) {
-          $('.site-branding').toggleClass('stuck', direction == 'down');
-        }
+      new Waypoint.Sticky({ 
+        element: this
       })      
     });
     
@@ -97,7 +94,9 @@ global Waypoints
     });    
     
     $(function() {
-        return;
+        if((typeof imageProtection == 'undefined') || !imageProtection){
+          return;
+        }
         var pixelSource = '/wp-content/uploads/t.gif';
         var preload = new Image();
         preload.src = pixelSource;
