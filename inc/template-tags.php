@@ -404,7 +404,7 @@ function has_instagram(){
 function theme_content_bands($field_name='content_band') {
 	if( function_exists('have_rows') ):
 		while ( have_rows($field_name) ) : the_row(); 
-				get_template_part('template-parts/bands', preg_replace("/[^a-zA-Z0-9_-]+/", "", get_row_layout()) );
+				get_template_part('template-parts/band', preg_replace("/[^a-zA-Z0-9_-]+/", "", get_row_layout()) );
 		endwhile; 
 	endif;
 }
