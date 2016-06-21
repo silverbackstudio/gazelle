@@ -327,7 +327,7 @@ function scripts() {
 		$loaded_deps[] = 'instafeed';
 	}
 
-    if(isset($config['iubenda'])) {
+    if(isset($config['iubenda']) && (false===WP_DEBUG)) {
 	    wp_enqueue_script('iubenda', '//cdn.iubenda.com/iubenda.js', null, null, true);
 	    wp_enqueue_script('iubenda-cookie', '//cdn.iubenda.com/cookie_solution/safemode/iubenda_cs.js'); 
 	    
@@ -342,7 +342,8 @@ function scripts() {
 			      dataLayer.push({'event': 'iubenda_consent_given'});
 			    }
 			  }
-			};"
+			};",
+			'before'
 		);	    
     }
     
