@@ -34,8 +34,8 @@ get_header(); ?>
 					<div class="entry-content">
 						<?php the_content(); ?>
 					</div><!-- .entry-content -->
-
-					<?php get_template_part('template-parts/content', 'bands') ?>
+					
+					<?php theme_content_bands(); ?>							
 				
 				</article><!-- #post-## -->
 

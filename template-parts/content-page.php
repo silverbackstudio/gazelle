@@ -39,7 +39,7 @@
 	<?php endif; ?>	
 		
 	<div class="content-bands">
-		<?php get_template_part( 'template-parts/content', 'bands' ); ?>
+		<?php theme_content_bands(); ?>
 	</div>	
 
 </article><!-- #post-## -->
