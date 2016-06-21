@@ -567,6 +567,12 @@ td {
 	font-family: "Helvetica Neue", sans-serif;
 }
 
+
+iframe {
+    width: 100%;
+}
+
+
 /**
  * 5.0 - Forms
  */
@@ -1767,7 +1773,7 @@ body.page #main > article.has-post-thumbnail {
     color: #0b233f;
 }
 
-/* Costumers feedback */
+/* Customers feedback */
 
 .customer-feedback {
     margin: 0;
@@ -1808,11 +1814,7 @@ body.page #main > article.has-post-thumbnail {
     right: 0px;
 }
 
-/* Loghi associazioni */
-
-#associati {
-    padding-top: 4em;
-}
+/* Logo lists */
     
 .logo-list .logo img {
     width: 80%;
@@ -1985,11 +1987,6 @@ img.adp-marker {
     font-size: 12px;
 }
 
-/* Mission */
-
-iframe {
-    width: 100%;
-}
 
 /* News page */
 
@@ -2379,10 +2376,6 @@ iframe {
         z-index: 999;
     }
     
-    #header-ribbon .phone {
-        margin: 0 10%;
-    }
-    
     /* Navigation */
     .mobile-toggle {
         display: none;
@@ -2623,29 +2616,6 @@ iframe {
         margin-right: 0.5%;
         margin-left: 0.5%;
         display: inline-block;
-    }
-    
-    /* Professionisti */
-    
-    #i-professionisti .secondary-band-content {
-        padding-bottom: 4em;
-        padding-top: 4em;
-    }
-    
-    #main #professionisti .main-band-content {
-        width: 50%;
-    }
-    
-    #main #professionisti .band:nth-child(2n) .main-band-content {
-        left: 50%;
-    }
-    
-    #main #professionisti .band:nth-child(2n) .secondary-band-content {
-        left: -50%;
-    }
-    
-    #professionisti .secondary-band-content{
-        padding-bottom: 4em;
     }
     
     /* Colophon */
