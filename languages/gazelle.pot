@@ -6,7 +6,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Fri Jun 17 2016 16:20:28 GMT+0200 (ora legale Europa "
 "occidentale)\n"
-"POT-Revision-Date: Fri Jun 17 2016 16:37:54 GMT+0200 (ora legale Europa "
+"POT-Revision-Date: Tue Jun 21 2016 16:27:55 GMT+0200 (ora legale Europa "
 "occidentale)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
@@ -26,6 +26,44 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco - https://localise.biz/"
 
+#: ../index.php:46 ../archive.php:49 ../search.php:37 ../home.php:55
+msgid "Previous page"
+msgstr ""
+
+#: ../index.php:47 ../archive.php:50 ../search.php:38 ../home.php:56
+msgid "Next page"
+msgstr ""
+
+#: ../index.php:48 ../archive.php:51 ../search.php:39 ../image.php:60 ../home.php:
+#: 57 ../template-parts/content-page.php:31 ../template-parts/content.php:37
+msgid "Page"
+msgstr ""
+
+#: ../search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../header.php:27
+msgid "Skip to content"
+msgstr ""
+
+#: ../header.php:48 ../header.php:51 ../header.php:68
+msgid "Search"
+msgstr ""
+
+#: ../header.php:54
+msgid "Menu"
+msgstr ""
+
+#: ../header.php:58 ../functions.php:145
+msgid "Primary Menu"
+msgstr ""
+
+#: ../header.php:72 ../functions.php:146
+msgid "Social Links Menu"
+msgstr ""
+
 #: ../footer.php:23
 msgid "VAT ID"
 msgstr ""
@@ -36,6 +74,116 @@ msgstr ""
 
 #: ../footer.php:41
 msgid "Footer Legal Menu"
+msgstr ""
+
+#: ../image.php:24
+msgid "Previous Image"
+msgstr ""
+
+#: ../image.php:25
+msgid "Next Image"
+msgstr ""
+
+#: ../image.php:56 ../template-parts/content-page.php:27 ../template-
+#: parts/content.php:33
+msgid "Pages:"
+msgstr ""
+
+#: ../image.php:73
+msgctxt "Used before full size attachment link."
+msgid "Full size"
+msgstr ""
+
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#: ../image.php:84 ../template-parts/content.php:49
+#, php-format
+msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: ../image.php:102 ../single.php:29
+msgctxt "Parent post link"
+msgid ""
+"<span class=\"meta-nav\">Published in</span><span class=\"post-"
+"title\">%title</span>"
+msgstr ""
+
+#: ../home.php:31
+msgid "Categories"
+msgstr ""
+
+#: ../home.php:33
+msgid "All"
+msgstr ""
+
+#: ../searchform.php:13
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: ../searchform.php:14
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: ../searchform.php:16
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: ../sidebar.php:20
+msgid "Check out our Instagram Gallery"
+msgstr ""
+
+#: ../single.php:34
+msgid "Next"
+msgstr ""
+
+#: ../single.php:35
+msgid "Next post:"
+msgstr ""
+
+#: ../single.php:37
+msgid "Previous"
+msgstr ""
+
+#: ../single.php:38
+msgid "Previous post:"
+msgstr ""
+
+#: ../404.php:17
+msgid "Sorry! That page can&rsquo;t be found."
+msgstr ""
+
+#: ../404.php:21
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: ../functions.php:147
+msgid "Footer Menu"
+msgstr ""
+
+#: ../functions.php:196
+msgid "Tiled Gallery"
+msgstr ""
+
+#: ../functions.php:226
+msgid "Sidebar"
+msgstr ""
+
+#: ../functions.php:228
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: ../functions.php:379
+msgid "expand child menu"
+msgstr ""
+
+#: ../functions.php:380
+msgid "collapse child menu"
 msgstr ""
 
 #: ../comments.php:31
@@ -57,155 +205,15 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: ../index.php:46 ../archive.php:49 ../home.php:55 ../search.php:37
-msgid "Previous page"
+#. Name of the template
+msgid "No Columns"
 msgstr ""
 
-#: ../index.php:47 ../archive.php:50 ../home.php:56 ../search.php:38
-msgid "Next page"
-msgstr ""
-
-#: ../index.php:48 ../archive.php:51 ../home.php:57 ../image.php:60 ../search.php:
-#: 39 ../template-parts/content.php:37 ../template-parts/content-page.php:31 ..
-#: /template-parts/content-single.php:29
-msgid "Page"
-msgstr ""
-
-#: ../404.php:17
-msgid "Sorry! That page can&rsquo;t be found."
-msgstr ""
-
-#: ../404.php:21
-msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr ""
-
-#: ../front-page.php:54
-msgid "Check out our Instagram Gallery"
-msgstr ""
-
-#: ../single.php:29 ../image.php:102
-msgctxt "Parent post link"
+#: ../inc/back-compat.php:41 ../inc/back-compat.php:53 ../inc/back-compat.php:68
+#, php-format
 msgid ""
-"<span class=\"meta-nav\">Published in</span><span class=\"post-"
-"title\">%title</span>"
-msgstr ""
-
-#: ../single.php:34
-msgid "Next"
-msgstr ""
-
-#: ../single.php:35
-msgid "Next post:"
-msgstr ""
-
-#: ../single.php:37
-msgid "Previous"
-msgstr ""
-
-#: ../single.php:38
-msgid "Previous post:"
-msgstr ""
-
-#: ../home.php:31
-msgid "Categories"
-msgstr ""
-
-#: ../home.php:33
-msgid "All"
-msgstr ""
-
-#: ../image.php:24
-msgid "Previous Image"
-msgstr ""
-
-#: ../image.php:25
-msgid "Next Image"
-msgstr ""
-
-#: ../image.php:56 ../template-parts/content.php:33 ../template-parts/content-
-#: page.php:27 ../template-parts/content-single.php:25
-msgid "Pages:"
-msgstr ""
-
-#: ../image.php:73
-msgctxt "Used before full size attachment link."
-msgid "Full size"
-msgstr ""
-
-#. translators: %s: Name of current post
-#. translators: %s: Name of current post
-#. translators: %s: Name of current post
-#. translators: %s: Name of current post
-#. translators: %s: Name of current post
-#: ../image.php:84 ../template-parts/content.php:49 ../template-parts/content-
-#: page.php:41 ../template-parts/content-search.php:28 ../template-parts/content-
-#: search.php:43 ../template-parts/content-single.php:46
-#, php-format
-msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
-
-#: ../functions.php:134 ../header.php:58
-msgid "Primary Menu"
-msgstr ""
-
-#: ../functions.php:135 ../header.php:69
-msgid "Social Links Menu"
-msgstr ""
-
-#: ../functions.php:136
-msgid "Footer Menu"
-msgstr ""
-
-#: ../functions.php:185
-msgid "Tiled Gallery"
-msgstr ""
-
-#: ../functions.php:215
-msgid "Sidebar"
-msgstr ""
-
-#: ../functions.php:217
-msgid "Add widgets here to appear in your sidebar."
-msgstr ""
-
-#: ../functions.php:355
-msgid "expand child menu"
-msgstr ""
-
-#: ../functions.php:356
-msgid "collapse child menu"
-msgstr ""
-
-#: ../header.php:27
-msgid "Skip to content"
-msgstr ""
-
-#: ../header.php:48 ../header.php:51
-msgid "Search"
-msgstr ""
-
-#: ../header.php:54
-msgid "Menu"
-msgstr ""
-
-#: ../searchform.php:13
-msgctxt "label"
-msgid "Search for:"
-msgstr ""
-
-#: ../searchform.php:14
-msgctxt "placeholder"
-msgid "Search &hellip;"
-msgstr ""
-
-#: ../searchform.php:16
-msgctxt "submit button"
-msgid "Search"
-msgstr ""
-
-#: ../search.php:18
-#, php-format
-msgid "Search Results for: %s"
+"Twenty Sixteen requires at least WordPress version 4.4. You are running "
+"version %s. Please upgrade and try again."
 msgstr ""
 
 #: ../inc/template-tags.php:25
@@ -278,23 +286,16 @@ msgstr ""
 msgid "Duomo"
 msgstr ""
 
-#: ../inc/template-tags.php:362 ../template-parts/content-bands.php:45
+#: ../inc/template-tags.php:362 ../template-parts/band-map_abstract.php:6
 msgid "Unlock map"
 msgstr ""
 
-#: ../inc/template-tags.php:363 ../template-parts/content-bands.php:46
+#: ../inc/template-tags.php:363 ../template-parts/band-map_abstract.php:7
 msgid "Lock map"
 msgstr ""
 
 #: ../inc/template-tags.php:367
 msgid "Show Route"
-msgstr ""
-
-#: ../inc/back-compat.php:41 ../inc/back-compat.php:53 ../inc/back-compat.php:68
-#, php-format
-msgid ""
-"Twenty Sixteen requires at least WordPress version 4.4. You are running "
-"version %s. Please upgrade and try again."
 msgstr ""
 
 #: ../inc/customizer.php:130
@@ -337,8 +338,13 @@ msgstr ""
 msgid "Yellow"
 msgstr ""
 
-#. Name of the template
-msgid "No Columns"
+#: ../template-parts/biography.php:28
+msgid "Author:"
+msgstr ""
+
+#: ../template-parts/biography.php:33
+#, php-format
+msgid "View all posts by %s"
 msgstr ""
 
 #: ../template-parts/content-none.php:13
@@ -366,21 +372,12 @@ msgstr ""
 msgid "Featured"
 msgstr ""
 
-#: ../template-parts/biography.php:28
-msgid "Author:"
-msgstr ""
-
-#: ../template-parts/biography.php:33
-#, php-format
-msgid "View all posts by %s"
-msgstr ""
-
 #. Name of the theme
 msgid "SilverbackStudio Gazelle"
 msgstr ""
 
 #. Theme URI of the theme
-msgid "https://www.silverbackstudio.it"
+msgid "https://gitlab.com/silverbackstudio/gazelle"
 msgstr ""
 
 #. Description of the theme
@@ -389,4 +386,8 @@ msgstr ""
 
 #. Author of the theme
 msgid "SilverbackStudio"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://www.silverbackstudio.it"
 msgstr ""

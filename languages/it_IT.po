@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Fri Jun 17 2016 16:20:28 GMT+0200 (ora legale Europa "
 "occidentale)\n"
-"PO-Revision-Date: Fri Jun 17 2016 16:41:50 GMT+0200 (ora legale Europa "
+"PO-Revision-Date: Tue Jun 21 2016 16:28:34 GMT+0200 (ora legale Europa "
 "occidentale)\n"
 "Last-Translator: silverbackstudio <webmaster@silverbackstudio.it>\n"
 "Language-Team: \n"
@@ -24,30 +24,51 @@ msgstr ""
 "X-Generator: Loco - https://localise.biz/\n"
 "X-Loco-Target-Locale: it_IT"
 
+#. Theme URI of the theme
+msgid "https://gitlab.com/silverbackstudio/gazelle"
+msgstr "https://gitlab.com/silverbackstudio/gazelle"
+
+#: ../index.php:46 ../archive.php:49 ../search.php:37 ../home.php:55
+msgid "Previous page"
+msgstr "Pagina precendente"
+
+#: ../index.php:47 ../archive.php:50 ../search.php:38 ../home.php:56
+msgid "Next page"
+msgstr "Pagina successiva"
+
+#: ../index.php:48 ../archive.php:51 ../search.php:39 ../image.php:60 ../home.php:
+#: 57 ../template-parts/content-page.php:31 ../template-parts/content.php:37
+msgid "Page"
+msgstr "Pagina"
+
+#: ../search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Risultati ricerca per:"
+
+#: ../header.php:27
+msgid "Skip to content"
+msgstr "Via al contenuto"
+
+#: ../header.php:48 ../header.php:51 ../header.php:68
+msgid "Search"
+msgstr "Cerca"
+
+#: ../header.php:54
+msgid "Menu"
+msgstr "Menu"
+
+#: ../header.php:58 ../functions.php:145
+msgid "Primary Menu"
+msgstr "Menu principale"
+
+#: ../header.php:72 ../functions.php:146
+msgid "Social Links Menu"
+msgstr "Menu Social"
+
 #: ../footer.php:23
 msgid "VAT ID"
 msgstr "P.IVA"
-
-#: ../template-parts/content-none.php:19
-#, php-format
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "Sei pronto a pubblicare il tuo primo post? Inizia qui"
-
-#: ../template-parts/content-none.php:23
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Mi dispiace, ma nessun risultato corrisponde a ciò che hai cercato. Per "
-"favore riprova con una chiave di ricerca differente."
-
-#: ../template-parts/content-none.php:28
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-"Non riusciamo a trovare quello che stai cercando. Prova ad effettuare una "
-"ricerca tramite il campo di ricerca."
 
 #: ../footer.php:27
 msgid "Footer Social Links Menu"
@@ -56,6 +77,120 @@ msgstr "Menu Social nel Footer"
 #: ../footer.php:41
 msgid "Footer Legal Menu"
 msgstr "Menu Legale nel Footer"
+
+#: ../image.php:24
+msgid "Previous Image"
+msgstr "Immagine precedente"
+
+#: ../image.php:25
+msgid "Next Image"
+msgstr "Prossima immagine"
+
+#: ../image.php:56 ../template-parts/content-page.php:27 ../template-
+#: parts/content.php:33
+msgid "Pages:"
+msgstr "Pagine;"
+
+#: ../image.php:73
+msgctxt "Used before full size attachment link."
+msgid "Full size"
+msgstr "Dimensione Massima"
+
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post
+#: ../image.php:84 ../template-parts/content.php:49
+#, php-format
+msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Modifica<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: ../image.php:102 ../single.php:29
+msgctxt "Parent post link"
+msgid ""
+"<span class=\"meta-nav\">Published in</span><span class=\"post-"
+"title\">%title</span>"
+msgstr ""
+"<span class=\"meta-nav\">Pubblicato in</span><span class=\"post-"
+"title\">%title</span>"
+
+#: ../home.php:31
+msgid "Categories"
+msgstr "Categorie"
+
+#: ../home.php:33
+msgid "All"
+msgstr "Tutti"
+
+#: ../searchform.php:13
+msgctxt "label"
+msgid "Search for:"
+msgstr "Cerca:"
+
+#: ../searchform.php:14
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Cerca &hellip;"
+
+#: ../searchform.php:16
+msgctxt "submit button"
+msgid "Search"
+msgstr "Cerca"
+
+#: ../sidebar.php:20
+msgid "Check out our Instagram Gallery"
+msgstr "Guarda la nostra galleria di Instagram"
+
+#: ../single.php:34
+msgid "Next"
+msgstr "Prossimio"
+
+#: ../single.php:35
+msgid "Next post:"
+msgstr "Prossimo articolo"
+
+#: ../single.php:37
+msgid "Previous"
+msgstr "Precevente"
+
+#: ../single.php:38
+msgid "Previous post:"
+msgstr "Post precedente:"
+
+#: ../404.php:17
+msgid "Sorry! That page can&rsquo;t be found."
+msgstr "Siamo spiacenti, la pagina non esiste."
+
+#: ../404.php:21
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"La pagina richiesta non è stata trovata a questo indirizzo, suggeriamo di "
+"effettuare una ricerca tramite l'apposito campo."
+
+#: ../functions.php:147
+msgid "Footer Menu"
+msgstr "Menu Footer"
+
+#: ../functions.php:196
+msgid "Tiled Gallery"
+msgstr "Galleria a Tile"
+
+#: ../functions.php:226
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: ../functions.php:228
+msgid "Add widgets here to appear in your sidebar."
+msgstr "Aggiungi widget qui per farli apparire nella tua sidebar"
+
+#: ../functions.php:379
+msgid "expand child menu"
+msgstr "espandi menu di secondo livello"
+
+#: ../functions.php:380
+msgid "collapse child menu"
+msgstr "chiudi menu di secondo livello"
 
 #: ../comments.php:31
 #, php-format
@@ -78,160 +213,18 @@ msgstr[1] "%1$s commenti su &ldquo;%2$s&rdquo;"
 msgid "Comments are closed."
 msgstr "Non è possibile pubblicare commenti"
 
-#: ../index.php:46 ../archive.php:49 ../home.php:55 ../search.php:37
-msgid "Previous page"
-msgstr "Pagina precendente"
+#. Name of the template
+msgid "No Columns"
+msgstr "Senza Colonne"
 
-#: ../index.php:47 ../archive.php:50 ../home.php:56 ../search.php:38
-msgid "Next page"
-msgstr "Pagina successiva"
-
-#: ../index.php:48 ../archive.php:51 ../home.php:57 ../image.php:60 ../search.php:
-#: 39 ../template-parts/content.php:37 ../template-parts/content-page.php:31 ..
-#: template-parts/content-single.php:29
-msgid "Page"
-msgstr "Pagina"
-
-#: ../404.php:17
-msgid "Sorry! That page can&rsquo;t be found."
-msgstr "Siamo spiacenti, la pagina non esiste."
-
-#: ../404.php:21
-msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr ""
-"La pagina richiesta non è stata trovata a questo indirizzo, suggeriamo di "
-"effettuare una ricerca tramite l'apposito campo."
-
-#: ../front-page.php:54
-msgid "Check out our Instagram Gallery"
-msgstr "Guarda la nostra galleria di Instagram"
-
-#: ../single.php:29 ../image.php:102
-msgctxt "Parent post link"
+#: ../inc/back-compat.php:41 ../inc/back-compat.php:53 ../inc/back-compat.php:68
+#, php-format
 msgid ""
-"<span class=\"meta-nav\">Published in</span><span class=\"post-"
-"title\">%title</span>"
+"Twenty Sixteen requires at least WordPress version 4.4. You are running "
+"version %s. Please upgrade and try again."
 msgstr ""
-"<span class=\"meta-nav\">Pubblicato in</span><span class=\"post-"
-"title\">%title</span>"
-
-#: ../single.php:34
-msgid "Next"
-msgstr "Prossimio"
-
-#: ../single.php:35
-msgid "Next post:"
-msgstr "Prossimo articolo"
-
-#: ../single.php:37
-msgid "Previous"
-msgstr "Precevente"
-
-#: ../single.php:38
-msgid "Previous post:"
-msgstr "Post precedente:"
-
-#: ../home.php:31
-msgid "Categories"
-msgstr "Categorie"
-
-#: ../home.php:33
-msgid "All"
-msgstr "Tutti"
-
-#: ../image.php:24
-msgid "Previous Image"
-msgstr "Immagine precedente"
-
-#: ../image.php:25
-msgid "Next Image"
-msgstr "Prossima immagine"
-
-#: ../image.php:56 ../template-parts/content.php:33 ../template-parts/content-
-#: page.php:27 ../template-parts/content-single.php:25
-msgid "Pages:"
-msgstr "Pagine;"
-
-#: ../image.php:73
-msgctxt "Used before full size attachment link."
-msgid "Full size"
-msgstr "Dimensione Massima"
-
-#. translators: %s: Name of current post
-#. translators: %s: Name of current post
-#. translators: %s: Name of current post
-#. translators: %s: Name of current post
-#. translators: %s: Name of current post
-#: ../image.php:84 ../template-parts/content.php:49 ../template-parts/content-
-#: page.php:41 ../template-parts/content-search.php:28 ../template-parts/content-
-#: search.php:43 ../template-parts/content-single.php:46
-#, php-format
-msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "Modifica<span class=\"screen-reader-text\"> \"%s\"</span>"
-
-#: ../functions.php:134 ../header.php:58
-msgid "Primary Menu"
-msgstr "Menu principale"
-
-#: ../functions.php:135 ../header.php:69
-msgid "Social Links Menu"
-msgstr "Menu Social"
-
-#: ../functions.php:136
-msgid "Footer Menu"
-msgstr "Menu Footer"
-
-#: ../functions.php:185
-msgid "Tiled Gallery"
-msgstr "Galleria a Tile"
-
-#: ../functions.php:215
-msgid "Sidebar"
-msgstr "Sidebar"
-
-#: ../functions.php:217
-msgid "Add widgets here to appear in your sidebar."
-msgstr "Aggiungi widget qui per farli apparire nella tua sidebar"
-
-#: ../functions.php:355
-msgid "expand child menu"
-msgstr "espandi menu di secondo livello"
-
-#: ../functions.php:356
-msgid "collapse child menu"
-msgstr "chiudi menu di secondo livello"
-
-#: ../header.php:27
-msgid "Skip to content"
-msgstr "Via al contenuto"
-
-#: ../header.php:48 ../header.php:51
-msgid "Search"
-msgstr "Cerca"
-
-#: ../header.php:54
-msgid "Menu"
-msgstr "Menu"
-
-#: ../searchform.php:13
-msgctxt "label"
-msgid "Search for:"
-msgstr "Cerca:"
-
-#: ../searchform.php:14
-msgctxt "placeholder"
-msgid "Search &hellip;"
-msgstr "Cerca &hellip;"
-
-#: ../searchform.php:16
-msgctxt "submit button"
-msgid "Search"
-msgstr "Cerca"
-
-#: ../search.php:18
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Risultati ricerca per:"
+"Il tema richiede una versione di Wordpress 4.4 o superiore. La versione "
+"installata al momento è la %s. Per effettua un aggiornamento e riprova."
 
 #: ../inc/template-tags.php:25
 msgctxt "Used before post author name."
@@ -303,26 +296,17 @@ msgstr "Stazione"
 msgid "Duomo"
 msgstr "Duomo"
 
-#: ../inc/template-tags.php:362 ../template-parts/content-bands.php:45
+#: ../inc/template-tags.php:362 ../template-parts/band-map_abstract.php:6
 msgid "Unlock map"
 msgstr "Sblocca mappa"
 
-#: ../inc/template-tags.php:363 ../template-parts/content-bands.php:46
+#: ../inc/template-tags.php:363 ../template-parts/band-map_abstract.php:7
 msgid "Lock map"
 msgstr "Blocca mappa"
 
 #: ../inc/template-tags.php:367
 msgid "Show Route"
 msgstr "Mostra percorso"
-
-#: ../inc/back-compat.php:41 ../inc/back-compat.php:53 ../inc/back-compat.php:68
-#, php-format
-msgid ""
-"Twenty Sixteen requires at least WordPress version 4.4. You are running "
-"version %s. Please upgrade and try again."
-msgstr ""
-"Il tema richiede una versione di Wordpress 4.4 o superiore. La versione "
-"installata al momento è la %s. Per effettua un aggiornamento e riprova."
 
 #: ../inc/customizer.php:130
 msgid "Base Color Scheme"
@@ -364,18 +348,6 @@ msgstr "Rosso"
 msgid "Yellow"
 msgstr "Giallo"
 
-#. Name of the template
-msgid "No Columns"
-msgstr "Senza Colonne"
-
-#: ../template-parts/content-none.php:13
-msgid "Nothing Found"
-msgstr "Nessun elemento presente"
-
-#: ../template-parts/content.php:14
-msgid "Featured"
-msgstr "Sponsorizzati"
-
 #: ../template-parts/biography.php:28
 msgid "Author:"
 msgstr "Autore:"
@@ -385,13 +357,38 @@ msgstr "Autore:"
 msgid "View all posts by %s"
 msgstr "Vai a tutti i post di %s"
 
+#: ../template-parts/content-none.php:13
+msgid "Nothing Found"
+msgstr "Nessun elemento presente"
+
+#: ../template-parts/content-none.php:19
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Sei pronto a pubblicare il tuo primo post? Inizia qui"
+
+#: ../template-parts/content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Mi dispiace, ma nessun risultato corrisponde a ciò che hai cercato. Per "
+"favore riprova con una chiave di ricerca differente."
+
+#: ../template-parts/content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Non riusciamo a trovare quello che stai cercando. Prova ad effettuare una "
+"ricerca tramite il campo di ricerca."
+
+#: ../template-parts/content.php:14
+msgid "Featured"
+msgstr "Sponsorizzati"
+
 #. Name of the theme
 msgid "SilverbackStudio Gazelle"
 msgstr "SilverbackStudio Gazelle"
-
-#. Theme URI of the theme
-msgid "https://www.silverbackstudio.it"
-msgstr "https://www.silverbackstudio.it"
 
 #. Description of the theme
 msgid "SilverbackStudio smart theme based on TwentySixteen HTML Structure"
@@ -402,3 +399,7 @@ msgstr ""
 #. Author of the theme
 msgid "SilverbackStudio"
 msgstr "SilverbackStudio"
+
+#. Theme URI of the theme
+msgid "https://www.silverbackstudio.it"
+msgstr "https://www.silverbackstudio.it"
