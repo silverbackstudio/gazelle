@@ -308,7 +308,10 @@ function scripts() {
     
 	$loaded_deps = array();
 	
-    wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Lato:400,300,700,400italic');
+	if(isset($config['google-fonts']) && !empty($config['google-fonts']['fonts'])){
+    	wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family='.$config['google-fonts']['fonts']);
+	}
+	
     wp_enqueue_style('icons-pack',  get_template_directory_uri().'/icons/style.css');
     wp_enqueue_style('flickity', '//cdn.jsdelivr.net/flickity/1.2/flickity.min.css');
 
