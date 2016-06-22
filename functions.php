@@ -320,7 +320,7 @@ function scripts() {
     wp_enqueue_cdn_script('jquery.collapse', 'jquery.collapse.js', array('jquery'), '1.1');
     wp_enqueue_cdn_script('flickity', 'flickity.pkgd.min.js', array(), '1.2');
 
-	if(isset($config['instagram']) && is_front_page()) {
+	if(isset($config['instagram']) && apply_filters('show_instagram_footer', is_front_page())) {
 		wp_enqueue_script('instafeed', '//cdn.jsdelivr.net/instafeed.js/1.4/instafeed.min.js', null, null, true);
 		wp_localize_script( 'instafeed', 'instafeedOptions', $config['instagram']);		
 		

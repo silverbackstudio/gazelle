@@ -10,6 +10,15 @@
  */
 ?>
 
+			<?php if(has_instagram() && apply_filters('show_instagram_footer', is_front_page())): ?>
+			<section id="instagram">
+				<header class="section-header">
+					<h3 class="section-title"><?php _e('Check out our Instagram Gallery', 'gazelle'); ?></h3>
+				</header>
+				<div id="instafeed" class="section-content"></div>
+			</section>
+			<?php endif; ?>
+
 		</div><!-- .site-content -->
 
 		<footer id="colophon" class="site-footer full-width" role="contentinfo">
