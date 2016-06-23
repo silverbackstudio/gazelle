@@ -93,28 +93,37 @@ global Waypoints
       accordion: true
     });    
     
-    $(function() {
-        if((typeof imageProtection == 'undefined') || !imageProtection){
-          return;
-        }
-        var pixelSource = '/wp-content/uploads/t.gif';
-        var preload = new Image();
-        preload.src = pixelSource;
-        var icnt = $('<div id="ggphtprtc"></div>');
-        icnt.appendTo('body');
-        $('img').live('mouseenter touchstart', function(e) {
-            var img = $(this);
-            if (img.hasClass('ggphtprtc')) return;
-            var pos = img.offset();
-            var overlay = $('<img class="ggphtprtc" src="' + pixelSource + '" width="' + img.width() + '" height="' + img.height() + '" />')
-                            .css({position: 'absolute', zIndex: 99, left: pos.left, top: pos.top})
-                            .appendTo(icnt)
-                            .bind('mouseleave', function() {
-                                setTimeout(function(){ overlay.remove(); }, 0, $(this));
-                            });
-            if ('ontouchstart' in window) $(document).one('touchend', function(){ setTimeout(function(){ overlay.remove(); }, 0, overlay); });
-        });
-    });    
+  
+  $(function() {
+      var pImg, overlay = $('<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />');
+
+      overlay
+        .css({position: 'absolute', display: 'none' })
+        .on('mouseleave mouseout touchend', function() { overlay.hide().appendTo('body'); })
+        .on('click dblclick', function(e){ pImg.trigger(e.type); });   
+      
+      $(document.body).on('mouseenter.imgprtc touchstart.imgprtc', 'img', function(e) {
+          
+          if( this === overlay[0])  return true;
+          
+          pImg = $(this);
+          
+          var pos = {zIndex: 1};
+          
+          pImg.parents().each(function(){
+          	var $elem = $(this); 
+          	if ( $elem.css( "position" ) !== "static" ) {
+            	pos.zIndex = parseInt( $elem.css( "zIndex" ), 10 ) || 0;
+            	if((Math.pow(2,31)-pos.zIndex) <= 1){ $elem.css( "zIndex", --pos.zIndex); }
+            }
+          });          
+          
+          $.extend( pos, pImg.position(), {width: pImg.outerWidth(), height: pImg.outerHeight()});
+          
+          overlay.insertAfter(pImg).css(pos).show();
+      });
+  });        
+    
 })(jQuery);
 
 
