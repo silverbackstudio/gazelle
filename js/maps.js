@@ -30,7 +30,7 @@ function initMaps() {
         
         var marker = new google.maps.Marker({
             position: mapCenter,
-            icon: '/wp-content/themes/studiopanebarco/img/marker_4.png',
+            icon: '/wp-content/themes/gazelle/img/marker_4.png',
             map: map,
             title: $mapContainer.data('mapTitle') || ''
         });             
