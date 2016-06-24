@@ -1,4 +1,4 @@
-<section class="band image-abstract-button" id="<?php echo esc_attr(sanitize_title(get_sub_field('title'))); ?>">
+<section class="band image-abstract-button <?php echo get_sub_field('full_width')?'band-full':''; ?>" id="<?php echo esc_attr(sanitize_title(get_sub_field('title'))); ?>">
 	
 	<?php if(get_sub_field('image')): ?>
 	<div class="band-image main-band-content"><?php

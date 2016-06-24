@@ -1714,7 +1714,7 @@ body.page #main > article.has-post-thumbnail {
     font-weight: 400;
 }
 
-.post-list .updated {
+time.updated {
     display: none;
 }
 
@@ -2569,6 +2569,17 @@ img.adp-marker {
         padding: 0;
         margin-bottom: 0;
     }
+    
+    #main .band.band-full {
+        display: block;
+    }    
+
+    #main .band.band-full .main-band-content, 
+    #main .band.band-full .secondary-band-content {
+        display: block;
+        position: static;
+        width: auto;
+    }    
     
     #main .band .band-image.compat-object-fit {
         padding-left: 0;
