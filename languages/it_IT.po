@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Fri Jun 17 2016 16:20:28 GMT+0200 (ora legale Europa "
 "occidentale)\n"
-"PO-Revision-Date: Tue Jun 21 2016 16:28:34 GMT+0200 (ora legale Europa "
+"PO-Revision-Date: Thu Jun 23 2016 17:05:52 GMT+0200 (ora legale Europa "
 "occidentale)\n"
 "Last-Translator: silverbackstudio <webmaster@silverbackstudio.it>\n"
 "Language-Team: \n"
@@ -144,7 +144,7 @@ msgstr "Guarda la nostra galleria di Instagram"
 
 #: ../single.php:34
 msgid "Next"
-msgstr "Prossimio"
+msgstr "Prossimo"
 
 #: ../single.php:35
 msgid "Next post:"
@@ -152,7 +152,7 @@ msgstr "Prossimo articolo"
 
 #: ../single.php:37
 msgid "Previous"
-msgstr "Precevente"
+msgstr "Precedente"
 
 #: ../single.php:38
 msgid "Previous post:"
