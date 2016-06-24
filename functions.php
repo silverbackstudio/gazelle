@@ -521,15 +521,6 @@ function rm_comments_att( $open, $post_id ) {
 add_filter( 'comments_open', 'rm_comments_att', 10 , 2 );
 
 
-function sitemap_post_types($post_types){
-	
-	$post_types[] = 'professionista';
-	
-	return $post_types;
-}
-
-add_filter('jetpack_sitemap_post_types', 'sitemap_post_types');
-
 function max_srcset_image_width($size){
 	return 2900;
 }
