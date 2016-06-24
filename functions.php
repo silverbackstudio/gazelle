@@ -282,7 +282,7 @@ function scripts() {
 	*/
 	
 	// Theme stylesheet.
-	wp_enqueue_style( 'gazelle-style', get_template_directory_uri().'/style.css' );
+	wp_enqueue_style( 'gazelle-style', get_template_directory_uri().'/style.css?t=gazelle' );
 
 	/*
 	// Load the Internet Explorer specific stylesheet.
@@ -401,8 +401,10 @@ add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
 
 function mce_before_init_insert_formats( $init_array ) {  
     
+    $style_formats = isset($init_array['style_formats'])?json_decode($init_array['style_formats']):array();
+    
 	// Define the style_formats array
-	$style_formats = array(  
+	$new_style_formats = array(  
 		// Each array child is a format with it's own settings
 		array(  
 			'title' => 'Collapse',  
@@ -424,7 +426,7 @@ function mce_before_init_insert_formats( $init_array ) {
 		),				
 	);  
 	// Insert the array, JSON ENCODED, into 'style_formats'
-	$init_array['style_formats'] = json_encode( $style_formats );  
+	$init_array['style_formats'] = json_encode( $style_formats + $new_style_formats );  
 	
 	return $init_array;  
   
