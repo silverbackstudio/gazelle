@@ -1,0 +1,9 @@
+<Files "config.ini">
+Order Allow,Deny
+Deny from all
+</Files>
+
+# help developers to identify the right css file, match with functions.php
+RewriteEngine on
+RewriteBase "/wp-content/themes/gazelle"
+RewriteRule    "^gazelle\.css"  "style\.css" [PT]
