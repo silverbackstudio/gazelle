@@ -1304,6 +1304,21 @@ body.search-toggled-on #masthead .search-form-container {
     color: #495970;
 }
 
+/* menu social */
+
+.social-navigation ul {
+	margin: 0;
+}
+
+.social-navigation ul li {
+	list-style: none;
+	display: inline-block;
+}
+
+.social-navigation li a:after {
+	font-size: 18px;
+}
+
 /* page 404 */
 
 .error404 #main .entry-content, .columns-2 {
@@ -1716,7 +1731,7 @@ time.updated {
 .post-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    align-content: space-between;
 }
 
 /* Post page  */
@@ -2008,10 +2023,6 @@ img.adp-marker {
     text-transform: uppercase;
     margin: 0 0.8em;
     font-weight: 400;
-}
-
-.filter-container li:last-child {
-    display: none;
 }
 
 .filter-container a {

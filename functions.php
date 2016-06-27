@@ -521,59 +521,6 @@ function rm_comments_att( $open, $post_id ) {
 add_filter( 'comments_open', 'rm_comments_att', 10 , 2 );
 
 
-function cf_search_join( $join ) {
-    global $wpdb;
-
-    if ( is_search() ) {    
-        $join .=' LEFT JOIN '.$wpdb->postmeta. ' ON '. $wpdb->posts . '.ID = ' . $wpdb->postmeta . '.post_id ';
-    }
-    
-    return $join;
-}
-//add_filter('posts_join', 'cf_search_join' );
-
-/**
- * Modify the search query with posts_where
- *
- * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_where
- */
-function cf_search_where( $where ) {
-    global $pagenow, $wpdb;
-   
-    if ( is_search() ) {
-        $where = preg_replace(
-            "/\(\s*".$wpdb->posts.".post_title\s+LIKE\s*(\'[^\']+\')\s*\)/",
-            "(".$wpdb->posts.".post_title LIKE $1) OR (".$wpdb->postmeta.".meta_value LIKE $1)", $where );
-    }
-
-    return $where;
-}
-//add_filter( 'posts_where', 'cf_search_where' );
-
-/**
- * Prevent duplicates
- *
- * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_distinct
- */
-function cf_search_distinct( $where ) {
-    global $wpdb;
-
-    if ( is_search() ) {
-        return "DISTINCT";
-    }
-
-    return $where;
-}
-//add_filter( 'posts_distinct', 'cf_search_distinct' );
-
-function sitemap_post_types($post_types){
-	
-	$post_types[] = 'professionista';
-	
-	return $post_types;
-}
-
-add_filter('jetpack_sitemap_post_types', 'sitemap_post_types');
 
 function max_srcset_image_width($size){
 	return 2900;
