@@ -530,7 +530,7 @@ function cf_search_join( $join ) {
     
     return $join;
 }
-add_filter('posts_join', 'cf_search_join' );
+//add_filter('posts_join', 'cf_search_join' );
 
 /**
  * Modify the search query with posts_where
@@ -548,7 +548,7 @@ function cf_search_where( $where ) {
 
     return $where;
 }
-add_filter( 'posts_where', 'cf_search_where' );
+//add_filter( 'posts_where', 'cf_search_where' );
 
 /**
  * Prevent duplicates
@@ -564,7 +564,7 @@ function cf_search_distinct( $where ) {
 
     return $where;
 }
-add_filter( 'posts_distinct', 'cf_search_distinct' );
+//add_filter( 'posts_distinct', 'cf_search_distinct' );
 
 function sitemap_post_types($post_types){
 	
@@ -741,3 +741,8 @@ function excerpt_length( $length ) {
 	return 20;
 }
 add_filter( 'excerpt_length', 'excerpt_length', 999 );
+
+function bloginfo_shortcode($attrs){
+	return get_bloginfo($attrs="what");
+}
+add_shortcode('bloginfo', __NAMESPACE__.'\\bloginfo_shortcode');
