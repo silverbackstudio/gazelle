@@ -95,6 +95,9 @@ global Waypoints
     
   
   $(function() {
+      /* global imgPrtc */
+      if((typeof imgPrtc == 'undefined') || (!imgPrtc)) return;
+     
       var pImg, overlay = $('<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />');
 
       overlay
