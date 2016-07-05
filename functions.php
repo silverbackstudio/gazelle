@@ -119,9 +119,10 @@ function setup() {
 	 *  @since Twenty Sixteen 1.2
 	 */
 	add_theme_support( 'custom-logo', array(
-		'height'      => 240,
-		'width'       => 240,
+		'height'      => 40,
+		'width'       => 220,
 		'flex-height' => true,
+		'flex-width'  => true,
 	) );
 
 	/*
@@ -199,6 +200,13 @@ function gallery_image_sizes($sizes) {
 }
 
 add_filter('image_size_names_choose', 'gallery_image_sizes');
+
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+
+add_filter('upload_mimes', 'cc_mime_types');
 
 /**
  * Sets the content width in pixels, based on the theme's design and stylesheet.
@@ -312,7 +320,7 @@ function scripts() {
     	wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family='.$config['google-fonts']['fonts']);
 	}
 	
-    wp_enqueue_style('icons-pack',  get_template_directory_uri().'/icons/style.css');
+    wp_enqueue_style('gazelle-icons',  get_template_directory_uri().'/icons/style.css');
     wp_enqueue_style('flickity', '//cdn.jsdelivr.net/flickity/1.2/flickity.min.css');
 
     if(isset($config['fonts_com'])){
