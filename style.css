@@ -913,10 +913,6 @@ a {
     text-decoration: none;
 }
  
-p a {
-    text-decoration: underline;
-}
- 
 h1, h2, h3,
 button,
 .action-button,
@@ -962,7 +958,7 @@ textarea:focus {
 input[type="submit"], 
 button,
 .action-button {
-    background: #0b233f;
+    background: #444;
     padding: 0.7em 2em 0.7em 2em;
     color: #FFF;
     border: none;
@@ -1123,15 +1119,15 @@ button,
 }
 
 .main-navigation li a:hover {
-    color: #D3D3D3;
+    color: #000;
 }
 
 .main-navigation .current-menu-item a {
-    color: #0b233f;
+    color: #000;
 }
 
 .main-navigation .current-menu-item a:hover {
-    color: #0b233f;
+    color: #000;
 }
 
 #masthead .custom-logo {
@@ -1257,10 +1253,10 @@ body.search-toggled-on #masthead .search-form-container {
 #masthead .search-form input {
     background: none;
     border: none;
-    border-bottom: 1px solid #666;
     width: 80%;
     height: 3em;
     padding: 0.2em 0.5em 0 0.5em;
+    color: #eee;
 }
 
 /* search results */
@@ -1286,7 +1282,7 @@ body.search-toggled-on #masthead .search-form-container {
     text-decoration: none;
     display: inherit;
     font-size: 1.1em;
-    color: #0b233f;
+    color: #444;
     padding-left: 0.5em;
     padding-right: 0.5em;
     transition: background 0.2s ease-in-out;
@@ -1420,20 +1416,13 @@ body.search-toggled-on #masthead .search-form-container {
     box-shadow: rgba(50,50,50,0.7) 3px 0px 3px;
     padding-left: 1em;
     position: fixed;
-    z-index: 999;
+    z-index: 99;
     background: #FFF;
     width: 100%;
     height:3.5em;
     line-height: 3.5em;
     top: 0;
 }
-
-#masthead .header-image {
-    height: 400px;
-    height: 40vh;
-    min-height: 300px;
-}
-
 
 #masthead .header-image img {
     height: 100%;
@@ -1731,7 +1720,7 @@ time.updated {
 .post-list {
     display: flex;
     flex-wrap: wrap;
-    align-content: space-between;
+    align-content: flex-start;
 }
 
 /* Post page  */
@@ -1785,7 +1774,7 @@ time.updated {
 
 .meta-nav {
     font-weight: 400;
-    color: #0b233f;
+    color: #444;
 }
 
 /* Customers feedback */
@@ -2350,7 +2339,7 @@ img.adp-marker {
     #masthead .site-branding {
         box-shadow: none;
         border-bottom: 0;
-        z-index: 9999;
+        z-index: 99;
         width: auto;
         background: none;
         top: 0px;
@@ -2374,11 +2363,6 @@ img.adp-marker {
     #masthead .site-branding.stuck {
         top: 0;
     }    
-    
-    #masthead .header-image {
-        height: 600px;
-        height: 70vh;
-    }
     
     #main-header-panel.stuck {
         position: fixed;
@@ -2450,7 +2434,7 @@ img.adp-marker {
     }
     
     .main-navigation .current-menu-item a {
-        border-bottom: 2px solid #0b233f;
+        border-bottom: 2px solid #000;
     }
     
     
@@ -2634,7 +2618,7 @@ img.adp-marker {
     /* Post preview */
     
     .post-list .post, #latest-posts .post-list .post:nth-child(3) {
-        width: 32%;
+        width: 31%;
         margin-right: 0.5%;
         margin-left: 0.5%;
         display: inline-block;
@@ -2654,14 +2638,6 @@ img.adp-marker {
         display: block;
         color: #989898;
     }
-    
-    .nav-previous .post-title {
-        margin-left: 1em;
-    }
-
-    .nav-next .post-title {
-        margin-right: 1em;
-    }
 }
 
 /**
@@ -2671,10 +2647,6 @@ img.adp-marker {
 @media screen and (min-width: 75em) {
     
     /* Header */ 
-    .home #masthead {
-        height: 100%;
-        height: 100vh;
-    }
     
     .home #masthead .header-image,
     .home #masthead .site-header-main {
