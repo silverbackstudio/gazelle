@@ -51,7 +51,7 @@
 						<button class="search-toggle"><span class="screen-reader-text"><?php _e('Search', 'gazelle') ?></span></button>
 					</div>
 				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
-					<button id="menu-toggle" class="menu-toggle mobile-toggle"><div id="menu-icon"></div><span class="screen-reader-text"><?php _e( 'Menu', 'twentysixteen' ); ?></span></button>
+					<button id="menu-toggle" class="menu-toggle mobile-toggle"><i id="menu-icon"></i><span class="screen-reader-text"><?php _e( 'Menu', 'twentysixteen' ); ?></span></button>
 
 					<div id="site-header-menu" class="site-header-menu">
 						<?php if ( has_nav_menu( 'primary' ) ) : ?>
