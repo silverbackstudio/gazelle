@@ -1360,10 +1360,6 @@ body.search-toggled-on #masthead .search-form-container {
 /**
  * 11.0 - Content
  */
- 
-#main .band .band-content p {
-   text-align: justify;
-}
 
 #page{ 
     background: #FFF;
@@ -1465,9 +1461,6 @@ body.page #main > article.has-post-thumbnail {
     margin-top: 2em;
 }
 
-.entry-content p {
-   text-align: justify;
-}
 
 /* collapse */
 
@@ -2220,10 +2213,6 @@ img.adp-marker {
     
     /* Content */
     
-    #main .band .band-content p {
-       text-align: justify;
-    }
-    
     #content {
         margin-top: 0;
     }
@@ -2249,7 +2238,6 @@ img.adp-marker {
     
     #main .entry-content {
         margin-bottom: 6em;
-        text-align: justify;
     }    
     
     #main .entry-title {
