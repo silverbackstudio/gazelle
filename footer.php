@@ -10,14 +10,14 @@
  */
 ?>
 
-			<?php if(has_instagram() && apply_filters('show_instagram_footer', is_front_page())): ?>
-			<section id="instagram">
-				<header class="section-header">
-					<h3 class="section-title"><?php _e('Check out our Instagram Gallery', 'gazelle'); ?></h3>
-				</header>
-				<div id="instafeed" class="section-content"></div>
-			</section>
-			<?php endif; ?>
+		<?php if(has_instagram() && apply_filters('show_instagram_footer', is_front_page())): ?>
+		<section id="instagram">
+			<header class="section-header">
+				<h3 class="section-title"><?php _e('Check out our Instagram Gallery', 'gazelle'); ?></h3>
+			</header>
+			<div id="instafeed" class="section-content"></div>
+		</section>
+		<?php endif; ?>
 
 		</div><!-- .site-content -->
 
@@ -57,7 +57,7 @@
 				</nav><!-- .main-navigation -->
 			<?php endif; ?>			
 			
-			<div id="credits">Made by <a href="http://www.silverbackstudio.it" target="_blank" rel="external">SilverbackStudio</a></div>
+			<div id="credits">Made with passion by <a href="http://www.silverbackstudio.it" target="_blank" rel="external">SilverbackStudio</a></div>
 		</footer><!-- .site-footer -->
 	</div><!-- .site-inner -->
 </div><!-- .site -->
