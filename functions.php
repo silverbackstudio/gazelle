@@ -338,7 +338,7 @@ function scripts() {
 		$loaded_deps[] = 'instafeed';
 	}
 
-    if(isset($config['iubenda']) && (false===WP_DEBUG)) {
+    if(isset($config['iubenda']) && (false===WP_DEBUG) && !is_user_logged_in()) {
 	    wp_enqueue_script('iubenda', '//cdn.iubenda.com/iubenda.js', null, null, true);
 	    wp_enqueue_script('iubenda-cookie', '//cdn.iubenda.com/cookie_solution/safemode/iubenda_cs.js'); 
 	    
@@ -348,6 +348,11 @@ function scripts() {
 			  siteId: '".$config['iubenda']['siteId']."',
 			  cookiePolicyId: '".$config['iubenda']['cookiePolicyId']."',
 			  lang: '".substr(get_bloginfo('language'),0,2)."',
+			  banner: {
+				  slideDown: false,
+				  applyStyles: false
+				  ,content: '".__('<p>Informativa sull&apos;utilizzo dei cookie</p><p>Questo sito o gli strumenti terzi da questo utilizzati si avvalgono di cookie necessari al funzionamento ed utili alle finalità illustrate nella cookie policy. Se vuoi saperne di più o negare il consenso a tutti o ad alcuni cookie, consulta la %{cookie_policy_link}. Chiudendo questo banner, scorrendo questa pagina, cliccando su un link o proseguendo la navigazione in altra maniera, acconsenti all’uso dei cookie.</p>','gazelle')."'
+			  },			  
 			  callback: {
 			    onConsentGiven: function(){
 			      dataLayer.push({'event': 'iubenda_consent_given'});
@@ -576,7 +581,6 @@ function content_image_sizes_attr( $sizes, $size ) {
 		
 		return $sizes;
 	}
-
 	840 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px';
 
 	if ( 'page' === get_post_type() ) {
