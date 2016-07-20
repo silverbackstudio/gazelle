@@ -119,9 +119,10 @@ function setup() {
 	 *  @since Twenty Sixteen 1.2
 	 */
 	add_theme_support( 'custom-logo', array(
-		'height'      => 240,
-		'width'       => 240,
+		'height'      => 40,
+		'width'       => 220,
 		'flex-height' => true,
+		'flex-width'  => true,
 	) );
 
 	/*
@@ -199,6 +200,13 @@ function gallery_image_sizes($sizes) {
 }
 
 add_filter('image_size_names_choose', 'gallery_image_sizes');
+
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+
+add_filter('upload_mimes', 'cc_mime_types');
 
 /**
  * Sets the content width in pixels, based on the theme's design and stylesheet.
@@ -312,7 +320,7 @@ function scripts() {
     	wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family='.$config['google-fonts']['fonts']);
 	}
 	
-    wp_enqueue_style('icons-pack',  get_template_directory_uri().'/icons/style.css');
+    wp_enqueue_style('gazelle-icons',  get_template_directory_uri().'/icons/style.css');
     wp_enqueue_style('flickity', '//cdn.jsdelivr.net/flickity/1.2/flickity.min.css');
 
     if(isset($config['fonts_com'])){
@@ -330,7 +338,7 @@ function scripts() {
 		$loaded_deps[] = 'instafeed';
 	}
 
-    if(isset($config['iubenda']) && (false===WP_DEBUG)) {
+    if(isset($config['iubenda']) && (false===WP_DEBUG) && !is_user_logged_in()) {
 	    wp_enqueue_script('iubenda', '//cdn.iubenda.com/iubenda.js', null, null, true);
 	    wp_enqueue_script('iubenda-cookie', '//cdn.iubenda.com/cookie_solution/safemode/iubenda_cs.js'); 
 	    
@@ -340,6 +348,11 @@ function scripts() {
 			  siteId: '".$config['iubenda']['siteId']."',
 			  cookiePolicyId: '".$config['iubenda']['cookiePolicyId']."',
 			  lang: '".substr(get_bloginfo('language'),0,2)."',
+			  banner: {
+				  slideDown: false,
+				  applyStyles: false
+				  ,content: '".__('<p>Informativa sull&apos;utilizzo dei cookie</p><p>Questo sito o gli strumenti terzi da questo utilizzati si avvalgono di cookie necessari al funzionamento ed utili alle finalità illustrate nella cookie policy. Se vuoi saperne di più o negare il consenso a tutti o ad alcuni cookie, consulta la %{cookie_policy_link}. Chiudendo questo banner, scorrendo questa pagina, cliccando su un link o proseguendo la navigazione in altra maniera, acconsenti all’uso dei cookie.</p>','gazelle')."'
+			  },			  
 			  callback: {
 			    onConsentGiven: function(){
 			      dataLayer.push({'event': 'iubenda_consent_given'});
@@ -578,7 +591,6 @@ function content_image_sizes_attr( $sizes, $size ) {
 		
 		return $sizes;
 	}
-
 	840 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px';
 
 	if ( 'page' === get_post_type() ) {
