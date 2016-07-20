@@ -134,7 +134,7 @@ function setup() {
 	
 	add_image_size( 'square-thumbs', 150, 150, true );
 	add_image_size( 'band', 880, 520, true );	
-	add_image_size( 'page-cover', 1320, 9999, true ); 
+	add_image_size( 'page-cover', 1320, 9999 ); 
 	add_image_size( 'tiled-gallery', 9999, 1040 );
 	add_image_size( 'full-width', 1920, 9999 ); 
 	add_image_size( 'retina', 2880, 9999 );
@@ -406,24 +406,34 @@ function mce_before_init_insert_formats( $init_array ) {
 	// Define the style_formats array
 	$new_style_formats = array(  
 		// Each array child is a format with it's own settings
-		array(  
-			'title' => 'Collapse',  
-			'block' => 'div',  
-			'classes' => 'collapsible',
-			'wrapper' => true,
-		),
-		array(  
-			'title' => 'Accordion',  
-			'block' => 'div',  
-			'classes' => 'accordion',
-			'wrapper' => true,
-		),		
+		array(
+			'title'=>'Collapsibles',
+			'items'=>array(
+					array(  
+						'title' => 'Collapse',  
+						'block' => 'div',  
+						'classes' => 'collapsible',
+						'wrapper' => true,
+					),
+					array(  
+						'title' => 'Accordion',  
+						'block' => 'div',  
+						'classes' => 'accordion',
+						'wrapper' => true,
+					),					
+				)
+			),
 		array(  
 			'title' => '2 Colonne',  
 			'block' => 'div',  
 			'classes' => 'columns-2',
 			'wrapper' => true,
-		),				
+		),		
+		array(  
+			'title' => 'Action Button',  
+			'inline ' => 'a',  
+			'classes' => 'action-button',
+		),			
 	);  
 	// Insert the array, JSON ENCODED, into 'style_formats'
 	$init_array['style_formats'] = json_encode( $style_formats + $new_style_formats );  
