@@ -626,10 +626,8 @@ function post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	if ( 'post-thumbnail' === $size ) {
 		is_page() && $attr['sizes'] = '(max-width: 1320px) 100vw, 1320px';
 	} else if( 'band' === $size) {
-		$attr['sizes'] = '(max-width: 910px) 100vw, (max-width: 1320px) 70vw,  900px';
-	}  else if( 'badge' === $size) {
-		$attr['sizes'] = '(max-width: 910px) 10vw, (max-width: 1320px) 33vw,  440px';
-	}
+		$attr['sizes'] = '(max-width: 910px) 100vw, (max-width: 1320px) 70vw,  880px';
+	}  
 	
 	return $attr;
 }
@@ -715,3 +713,4 @@ function bloginfo_shortcode($attrs){
 	return get_bloginfo($attrs="what");
 }
 add_shortcode('bloginfo', __NAMESPACE__.'\\bloginfo_shortcode');
+
