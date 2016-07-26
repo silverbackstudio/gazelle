@@ -3,15 +3,27 @@ global Instafeed
 global jQuery
 global Google
 global Waypoints
+global objectFitElements
 */
 
 (function($){
     
     //--------- fallback per CSS objectFit ------------
     if ('objectFit' in document.documentElement.style === false) {
-          $('.image-fit-cover, .band-image, .gallery-size-tiled-gallery .gallery-item .gallery-icon, body.page #main > article .post-thumbnail').each(function () {
+          var elements = '.image-fit-cover, '
+                         + '.band-image, '
+                         + '.gallery-size-tiled-gallery .gallery-item .gallery-icon, '
+                         + 'body.page #main > article .post-thumbnail, '
+                         + '.post-list, '
+                         + '.carousel-cell';
+          
+          if(typeof objectFitElements != 'undefined'){
+            elements = elements + ' ,' + objectFitElements;
+          }
+          
+          $(elements).each(function () {
             var $container = $(this),
-                imgUrl = /*$container.find('img').prop('currentSrc') ||*/ $container.find('img').prop('src');
+                imgUrl = $container.find('img').prop('currentSrc') || $container.find('img').prop('src');
             if (imgUrl) {
               $container.css('backgroundImage', 'url(' + imgUrl + ')');
               $container.addClass('compat-object-fit');
