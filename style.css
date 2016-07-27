@@ -1317,38 +1317,47 @@ body.search-toggled-on #masthead .search-form-container {
 
 /* page 404 */
 
-.error404 #main .entry-content, .columns-2 {
+.error404 #main .entry-content,
+.search-no-results #main .entry-content,
+.columns-2 {
     -webkit-column-count: 1;
     -moz-column-count: 1;
     column-count: 1;
 }
 
-.error404 #content {
+.error404 #content,
+.search-no-results #content {
     margin-top: 6em;
 }
 
 .error404 .search-form,
-.error404 #content p {
+.error404 #content p,
+.search-no-results .search-form,
+.search-no-results #content p {
     text-align: center;
 }
 
-.error404 #content p {
+.error404 #content p,
+.search-no-results #content p {
     font-size: 1.5em;
     color: #888;
     font-weight: 400;
 }
 
-.error404 .search-form button:before {
+.error404 .search-form button:before,
+.search-no-results .search-form button:before {
     margin-left: 1em;
 }
 
-.error404 .search-field {
+.error404 .search-field,
+.search-no-results .search-field {
     border: none;
     border-bottom: 1px solid #ccc;
     padding: 0.5em 0;
 }
 
-.error404 .search-field:focus {
+.error404 .search-field:focus,
+.search-no-results .search-field:focus{
     border-bottom: 1px solid #222;
     color: #222;
 }
@@ -1863,13 +1872,13 @@ time.updated {
 }
 
 .map-locker .map-lock:after {
-    content: '\e90e';
+    content: '\e903';
     font-family: 'gazelle-icons';
     font-size: 2em;
 }
 
 .map-locker.locked .map-lock:after {
-    content: '\e90f';
+    content: '\e905';
 }
 
 @keyframes pulse {
@@ -2466,21 +2475,8 @@ img.adp-marker {
     
     .main-navigation li a {
         padding: 2em 0.5em;
-        border-bottom: none;
     }    
-    
-    .main-navigation li a {
-        border-bottom: 2px solid transparent;
-    }
-    
-    .main-navigation li:last-child {
-        border-bottom: none;
-    }
-    
-    .main-navigation .current-menu-item a {
-        border-bottom: 2px solid #000;
-    }
-    
+   
     
     /* Search */
     
