@@ -135,12 +135,8 @@ function setup() {
 	
 	add_image_size( 'square-thumbs', 150, 150, true );
 	add_image_size( 'band', 880, 520, true );	
-<<<<<<< HEAD
-	add_image_size( 'page-cover', 1320, 9999 ); 
-=======
 	add_image_size( 'band-full', 1320, 600, false );	
 	add_image_size( 'page-cover', 1320, 9999, true ); 
->>>>>>> faa956b62d98dfc80e9b29bc4b4ccdde62e414b6
 	add_image_size( 'tiled-gallery', 9999, 1040 );
 
 
