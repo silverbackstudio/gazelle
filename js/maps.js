@@ -1,3 +1,7 @@
+/* global jQuery */ 
+/* global google */ 
+/* global markerIcon */ 
+
 var mapStyle = /* inizio stile */ [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":60}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"visibility":"on"},{"lightness":30}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ef8c25"},{"lightness":40}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#b6c54c"},{"lightness":40},{"saturation":-40}]},{}] /* fine stile */; 
 
 function initMaps() {
@@ -30,7 +34,7 @@ function initMaps() {
         
         var marker = new google.maps.Marker({
             position: mapCenter,
-            icon: '/wp-content/themes/gazelle/img/marker_4.png',
+            icon: (typeof markerIcon !== 'undefined') ? markerIcon : '/wp-content/themes/gazelle/img/marker_4.png',
             map: map,
             title: $mapContainer.data('mapTitle') || ''
         });             
