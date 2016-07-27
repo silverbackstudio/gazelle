@@ -24,12 +24,12 @@
 		<footer id="colophon" class="site-footer full-width" role="contentinfo">
 
 			<div class="site-info content-wrapper">
-				<span class="site-title"><a class="screen-reader-text" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
+				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
 			</div><!-- .site-info -->
 			
 			<div class="site-info content-wrapper">
-				<p><?php bloginfo('contact_address'); ?> <?php bloginfo('contact_address2'); ?><br /><a href="tel:<?php bloginfo('contact_phone'); ?>"><?php bloginfo('contact_phone'); ?></a><br/><?php echo hide_email(get_bloginfo('contact_email','display')); ?></a></p>
-				<p><?php bloginfo('contact_company_name'); ?><br /><?php _e('VAT ID','gazelle'); ?>&nbsp;<?php bloginfo('contact_vat'); ?></p>
+				<p class="contact-info"><?php bloginfo('contact_address'); ?><br /><a href="tel:<?php bloginfo('contact_phone'); ?>"><?php bloginfo('contact_phone'); ?></a><br/><?php echo hide_email(get_bloginfo('contact_email','display')); ?></a></p>
+				<p class="company-info"><?php bloginfo('contact_company_name'); ?><br /><?php bloginfo('contact_address2'); ?><br /><?php _e('VAT ID','gazelle'); ?>&nbsp;<?php bloginfo('contact_vat'); ?></p>
 			</div><!-- .site-info -->
 			
 			<?php if ( has_nav_menu( 'social' ) ) : ?>
