@@ -52,8 +52,9 @@ function twentysixteen_custom_header_and_background() {
 	 */
 	add_theme_support( 'custom-header', apply_filters( 'twentysixteen_custom_header_args', array(
 		'default-text-color'     => $default_text_color,
-		'width'                  => 1200,
-		'height'                 => 280,
+		'width'                  => 1320,
+		'height'                 => 500,
+		'flex-width'             => true,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'twentysixteen_header_style',
 	) ) );
