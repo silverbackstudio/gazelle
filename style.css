@@ -1067,7 +1067,7 @@ button,
                 z-index 1s;
     overflow: hidden; 
     padding-left: 100%;
-} 
+}
 
 #site-header-menu.toggled-on {
     background: rgba(0,0,0,0.5);
@@ -1085,6 +1085,10 @@ button,
     height: 100%;
     z-index: -1;
     box-shadow: -1px 0px 10px rgba(0,0,0,0.4);
+}
+
+#site-header-menu ul {
+	list-style: none;
 }
 
 #site-header-menu .menu-primary-menu-container {
@@ -1505,17 +1509,6 @@ body.page #main > article.has-post-thumbnail {
     line-height: 1.5em;
 }
 
-#main .entry-header,
-#main .section-header {
-    position: relative;
-    padding-bottom: 2em;    
-    /* bordo decorazione header */
-    background-image: linear-gradient(to right, #495970 82%, rgba(255, 255, 255, 0) 15%);
-    background-position: 0 90%;
-    background-size: 55% 1px;
-    background-repeat: repeat-x;
-}
-
 #main .entry-header .entry-title,
 #main .section-header .section-title {
     margin:0;
@@ -1528,23 +1521,6 @@ body.page #main > article.has-post-thumbnail {
 
 
 /* decorazione header */
-#main .entry-header:after,
-#main .section-header:after
-{
-    content: "";
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 90%;
-    left:0;
-    right: 0;
-    line-height: 0;
-    color: #495970;
-    text-align: center;
-    content: "\e902";
-    font-family: "gazelle-icons";
-    font-size: 1.5em;
-}
 
 #main .band {
     text-align: center;
@@ -1679,17 +1655,6 @@ body.page #main > article.has-post-thumbnail {
 .post-list .post {
     background: #f8f8f8;
     margin-bottom: 2em;
-}
-
-#main .post-list .entry-header {
-    background: none;
-    text-align: left;
-    margin: 1em;
-    padding-bottom: 0;
-}
-
-#main .post-list .entry-header:after {
-    display: none;
 }
 
 #main .post-list .entry-title {
@@ -2618,7 +2583,7 @@ img.adp-marker {
 
     #main .content-bands .band.title-text .section-content {
         margin-left: 3rem;
-    }   
+    }
     
     #main .band.map-abstract {
         height: 400px;
