@@ -65,12 +65,6 @@ global objectFitElements
       offset: '70%'
     }); 
     
-    $('body.home').waypoint({
-      handler: function(direction) {
-          $('.site-branding').toggleClass('visible', (direction == 'down'));
-      },
-      offset: '-25%'
-    });
     
     if(document.createElement("input").placeholder != undefined){
       $("#page form :input").each(function(index, elem) {
