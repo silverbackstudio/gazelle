@@ -135,11 +135,14 @@ function setup() {
 	
 	add_image_size( 'square-thumbs', 150, 150, true );
 	add_image_size( 'band', 880, 520, true );	
+<<<<<<< HEAD
 	add_image_size( 'page-cover', 1320, 9999 ); 
+=======
+	add_image_size( 'band-full', 1320, 600, false );	
+	add_image_size( 'page-cover', 1320, 9999, true ); 
+>>>>>>> faa956b62d98dfc80e9b29bc4b4ccdde62e414b6
 	add_image_size( 'tiled-gallery', 9999, 1040 );
-	add_image_size( 'full-width', 1920, 9999 ); 
-	add_image_size( 'retina', 2880, 9999 );
-	
+
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -627,6 +630,8 @@ function post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 		is_page() && $attr['sizes'] = '(max-width: 1320px) 100vw, 1320px';
 	} else if( 'band' === $size) {
 		$attr['sizes'] = '(max-width: 910px) 100vw, (max-width: 1320px) 70vw,  880px';
+	} else if( 'band-full' === $size) {
+		$attr['sizes'] = ' (max-width: 1320px) 100vw,  1320px';
 	}  
 	
 	return $attr;
