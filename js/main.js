@@ -36,7 +36,6 @@ global objectFitElements
       instafeed.run();    
     }
 
-    
     $( '#menu-toggle' ).on('click.gazelle', function(){
       $('body').toggleClass('menu-toggled-on');
     });
@@ -49,6 +48,12 @@ global objectFitElements
       new Waypoint.Sticky({ 
         element: this
       })      
+    });
+    
+    $('.waypoints-sticky-nowrap').waypoint({
+      handler: function(direction) {
+        $(this.element).toggleClass('stuck', (direction == 'down'));
+      }
     });
     
     $('.band, .gallery-item').addClass('dimmable dimmed').waypoint({
@@ -65,7 +70,7 @@ global objectFitElements
           $('.site-branding').toggleClass('visible', (direction == 'down'));
       },
       offset: '-25%'
-    });     
+    });
     
     if(document.createElement("input").placeholder != undefined){
       $("#page form :input").each(function(index, elem) {
