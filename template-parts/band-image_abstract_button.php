@@ -2,7 +2,7 @@
 	
 	<?php if(get_sub_field('image')): ?>
 	<div class="band-image main-band-content"><?php
-	 echo wp_get_attachment_image(get_sub_field('image'), 'band'); 
+	 echo wp_get_attachment_image(get_sub_field('image'), get_sub_field('full_width')?'band-full':'band'); 
 	?></div><?php
 	 endif;    			
 	?><div class="secondary-band-content">
