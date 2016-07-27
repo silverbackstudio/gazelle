@@ -32,12 +32,17 @@ function initMaps() {
             zoom: $mapContainer.data('mapZoom') || 14
         });    
         
-        var marker = new google.maps.Marker({
+        var markerSettings = {
             position: mapCenter,
-            icon: (typeof markerIcon !== 'undefined') ? markerIcon : '/wp-content/themes/gazelle/img/marker_4.png',
             map: map,
             title: $mapContainer.data('mapTitle') || ''
-        });             
+        }
+        
+        if(typeof markerIcon !== 'undefined'){
+            markerSettings.icon = markerIcon;
+        }
+        
+        var marker = new google.maps.Marker(markerSettings);             
         
         var directionsTarget = $mapContainer.find('.map-directions');         
         
