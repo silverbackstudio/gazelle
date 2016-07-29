@@ -1977,6 +1977,11 @@ img.adp-marker {
     font-weight: 200;
 }
 
+#colophon .contact-info > span,
+#colophon .company-info > span {
+	display: block;
+}
+
 #credits {
     background: #333;
     padding: 0.5em 2em;

@@ -28,8 +28,16 @@
 			</div><!-- .site-info -->
 			
 			<div class="site-info content-wrapper">
-				<p class="contact-info"><?php bloginfo('contact_address'); ?><br /><a href="tel:<?php bloginfo('contact_phone'); ?>"><?php bloginfo('contact_phone'); ?></a><br/><?php echo hide_email(get_bloginfo('contact_email','display')); ?></a></p>
-				<p class="company-info"><?php bloginfo('contact_company_name'); ?><br /><?php bloginfo('contact_address2'); ?><br /><?php _e('VAT ID','gazelle'); ?>&nbsp;<?php bloginfo('contact_vat'); ?></p>
+				<p class="contact-info">
+					<span class="contact-address"><?php bloginfo('contact_address'); ?></span>
+					<span class="contact-phone"><a href="tel:<?php bloginfo('contact_phone'); ?>"><?php bloginfo('contact_phone'); ?></a></span>
+					<span class="contact-email"><?php echo hide_email(get_bloginfo('contact_email','display')); ?></a></span>
+				</p>
+				<p class="company-info">
+					<span class="contact-company-name"><?php bloginfo('contact_company_name'); ?></span>
+					<span class="contact-address2"><?php bloginfo('contact_address2'); ?></span>
+					<span class="contact-vat"><?php _e('VAT ID','gazelle'); ?>&nbsp;<?php bloginfo('contact_vat'); ?></span>
+				</p>
 			</div><!-- .site-info -->
 			
 			<?php if ( has_nav_menu( 'social' ) ) : ?>
