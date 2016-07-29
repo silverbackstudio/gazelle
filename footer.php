@@ -46,16 +46,24 @@
 				</nav><!-- .social-navigation -->
 			<?php endif; ?>
 			
-			<?php if ( has_nav_menu( 'footer' ) ) : ?>
-				<nav class="service-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Legal Menu', 'twentysixteen' ); ?>">
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'footer',
-							'menu_class'     => 'footer-menu',
-						 ) );
-					?>
+			<div id="legal">
+				<span id="copyright"><?php printf(__('Copyright &copy; %s'), date('Y')); ?></span>
+				<nav class="service-navigation" id="privacy" role="navigation" aria-label="<?php esc_attr_e( 'Privacy Menu', 'twentysixteen' ); ?>">
+					<ul>
+						<?php $config = \Silverback\WP\Themes\Gazelle\get_config(); ?>
+						<?php if(isset($config['iubenda']) && isset($config['iubenda']['privacyPolicyId'])): ?>
+						<li id="privacy-policy">
+							<a href="//www.iubenda.com/privacy-policy/<?php echo $config['iubenda']['privacyPolicyId']; ?>" class="iubenda-nostyle no-brand iubenda-embed" title="<?php _e('Privacy Policy', 'gazelle'); ?>"><?php _e('Privacy Policy', 'gazelle'); ?></a>
+						</li>
+						<?php endif; ?>
+						<?php if(isset($config['iubenda']) && isset($config['iubenda']['cookiePolicyId'])): ?>
+						<li id="cookie-policy">
+							<a href="https://www.iubenda.com/privacy-policy/<?php echo $config['iubenda']['cookiePolicyId']; ?>/cookie-policy" title="<?php _e('Cookie Policy', 'gazelle'); ?>"><?php _e('Cookie Policy', 'gazelle'); ?></a>
+						</li>
+						<?php endif; ?>
+					</ul>
 				</nav><!-- .main-navigation -->
-			<?php endif; ?>			
+			</div>
 			
 			<div id="credits">Made with passion by <a href="http://www.silverbackstudio.it" target="_blank" rel="external">SilverbackStudio</a></div>
 		</footer><!-- .site-footer -->
