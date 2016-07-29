@@ -169,6 +169,14 @@ textarea {
 	margin: 0;
 }
 
+button:focus,
+input:focus,
+optgroup:focus,
+select:focus,
+textarea:focus {
+	outline: none;
+}
+
 select {
 	text-transform: none;
 }
@@ -767,6 +775,24 @@ a:active {
 	box-shadow: none;
 }
 
+.service-navigation ul li {
+	font-family: sans-serif;
+	list-style: none;
+	display: inline-block;
+	margin: 0 0.2em;
+}
+
+.service-navigation ul li:first-child:after {
+	content: "";
+	width: 0.2em;
+	height: 0.2em;
+	border-radius: 100%;
+	background: #fff;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 0.3em;
+}
+
 /**
  * 7.0 - Accessibility
  */
@@ -980,7 +1006,7 @@ button,
     right: 0;
     background: none;
     border: none;
-    z-index: 99999;
+    z-index: 9999;
     padding: 0;
     width: 2.8em;
     height: 3.4em;
@@ -1071,7 +1097,7 @@ button,
 
 #site-header-menu.toggled-on {
     background: rgba(0,0,0,0.5);
-    z-index: 9999;
+    z-index: 9990;
     padding-left: 18%;
     overflow-y: scroll;
     padding-bottom: 3em;
@@ -1259,7 +1285,7 @@ body.search-toggled-on #masthead .search-form-container {
     border: none;
     width: 80%;
     height: 3em;
-    padding: 0.2em 0.5em 0 0.5em;
+    padding: 0.2em 0.5em 0 1.5em;
     color: #eee;
 }
 
@@ -2082,6 +2108,10 @@ img.adp-marker {
 
 /*  Iubenda - cookie policy */
 
+#iubenda-pp {
+	z-index: 100000;
+}
+
 #iubenda-cs-banner{
     bottom: 0px;
     left: 0px !important;
@@ -2386,10 +2416,11 @@ img.adp-marker {
         position: fixed;
         width: 100%;
         top: 0;
-        z-index: 999;
+        z-index: 99;
     }
     
     /* Navigation */
+    
     .mobile-toggle {
         display: none;
     }
