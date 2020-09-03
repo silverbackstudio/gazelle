@@ -1420,6 +1420,7 @@ body.search-toggled-on #masthead .search-form-container {
 }
  
 .image-fit-cover img {
+	font-family: "object-fit: cover";
     object-fit: cover;
 }
 
@@ -1462,6 +1463,7 @@ body.search-toggled-on #masthead .search-form-container {
 #masthead .header-image img {
     height: 100%;
     width: 100%;
+    max-height: 90vh;
 }
 
 /**
@@ -1577,8 +1579,10 @@ body.page #main > article.has-post-thumbnail {
 
 #main .band .band-image img {
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
+    font-family: "object-fit: cover";
     object-fit: cover;
+    max-height: 520px;
 }
 
 #main .band .band-action {
@@ -1680,7 +1684,7 @@ body.page #main > article.has-post-thumbnail {
 
 .post-list .post {
     background: #f8f8f8;
-    margin-bottom: 2em;
+    margin-bottom: 2em !important;
 }
 
 #main .post-list .entry-title {
@@ -1703,6 +1707,7 @@ time.updated {
 .post-list img {
     width: 100%;
     height: 17em;
+    font-family: "object-fit: cover";
     object-fit: cover;
 }
 
@@ -2187,6 +2192,7 @@ img.adp-marker {
     .gallery-size-tiled-gallery .gallery-item .gallery-icon img {
         max-height: 520px;
         height: 32vw;
+        font-family: "object-fit: cover";
         object-fit: cover;
     } 
     
@@ -2228,7 +2234,8 @@ img.adp-marker {
 
 @media screen and (min-width: 44.375em) {
     
-    #header-ribbon .call-to-action, #header-ribbon .email {
+    #header-ribbon .call-to-action,
+    #header-ribbon .email {
         display: inline-block;
     }
     
@@ -2277,6 +2284,7 @@ img.adp-marker {
     body.page #main > article .post-thumbnail img {
         width: 100%;
         max-height: 500px;
+        font-family: "object-fit: cover";
         object-fit: cover;
     }    
 
@@ -2358,6 +2366,10 @@ img.adp-marker {
  */
 
 @media screen and (min-width: 56.875em) {
+	
+    .flickity-viewport {
+		min-height: 520px !important;
+	}
 
     #page {
         margin-top: 0;
@@ -2615,7 +2627,7 @@ img.adp-marker {
     #main .band:nth-child(even) .band-image.compat-object-fit {
         border-right: none;
         border-left: 0.5em solid #FFF;
-    }    
+    }
 
     #main .content-bands .band.title-text .section-content {
         margin-left: 3rem;
@@ -2653,6 +2665,7 @@ img.adp-marker {
     }
     
     .carousel-cell img {
+    	font-family: "object-fit: cover";
         object-fit: cover;
     }
     

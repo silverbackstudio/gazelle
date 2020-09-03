@@ -8,6 +8,7 @@
         max-height: 520px;
         height: 320px;
         object-fit: cover;
+        font-family: 'object-fit: cover';
         -ms-behavior: url(/wp-content/themes/gazelle/css/polyfill/backgroundsize.min.htc);
     }    
   

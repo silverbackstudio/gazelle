@@ -136,7 +136,7 @@ function setup() {
 	add_image_size( 'square-thumbs', 150, 150, true );
 	add_image_size( 'band', 880, 520, true );	
 	add_image_size( 'band-full', 1320, 600, false );	
-	add_image_size( 'page-cover', 1320, 9999, true ); 
+	add_image_size( 'page-cover', 1320, 9999, false ); 
 	add_image_size( 'tiled-gallery', 9999, 1040 );
 
 
@@ -329,6 +329,7 @@ function scripts() {
     wp_enqueue_cdn_script('waypoints', array('jquery.waypoints.min.js', 'shortcuts/sticky.min.js'), array('jquery'));
     wp_enqueue_cdn_script('jquery.collapse', 'jquery.collapse.js', array('jquery'), '1.1');
     wp_enqueue_cdn_script('flickity', 'flickity.pkgd.min.js', array(), '1.2');
+    wp_enqueue_cdn_script('object-fit-images', 'ofi.browser.js');
 
 	if(isset($config['instagram']) && apply_filters('show_instagram_footer', is_front_page())) {
 		wp_enqueue_script('instafeed', '//cdn.jsdelivr.net/instafeed.js/1.4/instafeed.min.js', null, null, true);
